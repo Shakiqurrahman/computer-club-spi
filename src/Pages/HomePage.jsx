@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <div className="flex flex-col justify-center">
       <Hero />
-      <div className="flex items-center mt-6">
+      <div className="md:flex space-y-8 md:space-x-0 items-center my-6">
         <div className="w-full">
           <Lottie animationData={computerGIF} />
         </div>

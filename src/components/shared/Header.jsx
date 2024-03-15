@@ -11,7 +11,7 @@ const Header = () => {
         <h1 className="text-lg font-semibold font-poppins">Computer Club</h1>
         </div>
       <nav>
-        <ul className="flex gap-x-10 text-[15px]">
+        <ul className="hidden sm:flex gap-x-10 text-[15px]">
           <li className="hover:text-[#f45183] duration-300">
             <NavLink to="/">
               Home
