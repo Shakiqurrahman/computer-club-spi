@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 /* Poppins Font */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap");
+@layer {
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap");
+}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -17,5 +19,9 @@ body {
 }
 
 .active {
-  @apply text-orange-700 duration-300;
+  @apply text-[#f45183];
+}
+
+text-main {
+  @apply text-[#f45183];
 }
