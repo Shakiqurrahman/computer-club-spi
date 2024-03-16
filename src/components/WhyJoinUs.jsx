@@ -6,7 +6,7 @@ import { MdEmojiEvents } from "react-icons/md";
 const WhyJoinUs = () => {
     return (
         <div>
-            <h1 className="text-center text-secondary text-4xl font-semibold mb-10">Why Join SPI Computer Club?</h1>
+            <h2 className="text-center text-secondary text-4xl font-semibold mb-10">Why Join SPI Computer Club?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="group px-6 py-8 border border-gray-400 rounded-xl flex  flex-col items-center justify-center text-center hover:border-[#00066e]  duration-300">
                     <SiSkillshare className="mb-6 text-[80px] text-secondary"/>
