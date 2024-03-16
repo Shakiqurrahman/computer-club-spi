@@ -18,10 +18,10 @@ body {
   @apply max-w-[1280px] mx-auto px-4;
 }
 
-.active {
-  @apply text-[#f45183];
-}
+/* .active {
+  @apply text-main;
+} */
 
-text-main {
-  @apply text-[#f45183];
+.active {
+  @apply text-[#2030e0];
 }
