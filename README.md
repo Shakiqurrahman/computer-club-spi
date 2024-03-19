@@ -2,7 +2,7 @@
 
 ## Tech Stack
 
-**Client:** React, Tailwind CSS
+**Client:** React, Tailwind CSS, Express JS, MongoDB
 
 ## Run Locally
 
