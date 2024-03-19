@@ -6,7 +6,7 @@
 
 ## Run Locally
 
-Clone the project
+Clone the project:
 
 ```bash
   git clone https://github.com/Shakiqurrahman/computer-club-spi.git
