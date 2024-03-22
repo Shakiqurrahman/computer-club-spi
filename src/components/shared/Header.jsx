@@ -24,8 +24,10 @@ const Header = () => {
             <NavLink to="/notice">Notice</NavLink>
           </li>
           <li className="hover:text-[#2030e0] duration-300">
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/about">About
+            </NavLink>
           </li>
+          
           <li className="hover:text-[#2030e0] duration-300">
             <NavLink to="/contact">Contact</NavLink>
           </li>
