@@ -5,7 +5,7 @@ import img from "../assets/teachers/principal2.png";
 
 const Principal = () => {
   return (
-    <div className="flex flex-col justify-center items-center bg-slate-100 sm:p-20 px-5 py-14 rounded-[30px] drop-shadow-2xl shadow-md border border-gray-300 hover:border-secondary duration-300">
+    <div className="flex flex-col justify-center items-center bg-[#f5faff] sm:p-20 px-5 py-14 rounded-[30px] drop-shadow-2xl shadow-md border border-gray-300 hover:border-secondary duration-300">
       <img
         className="rounded-full w-[200px] ring-2 ring-[#2030e0] ring-offset-2"
         src={img}

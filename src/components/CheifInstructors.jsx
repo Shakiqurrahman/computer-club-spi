@@ -31,7 +31,7 @@ const CheifInstructors = () => {
     <div className="flex flex-col md:flex-row gap-10">
       {chiefInstructorsData.map((data) => (
         <div
-          className="w-full flex flex-col justify-center items-center bg-slate-100 sm:p-16 px-5 py-14 rounded-[30px] drop-shadow-2xl shadow-md border border-gray-300 hover:border-secondary duration-300"
+          className="w-full flex flex-col justify-center items-center bg-[#f5faff] sm:p-16 px-5 py-14 rounded-[30px] drop-shadow-2xl shadow-md border border-gray-300 hover:border-secondary duration-300"
           key={data.id}
         >
           <img

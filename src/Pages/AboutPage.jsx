@@ -11,17 +11,18 @@ import FAQs from "../components/FAQs";
 const AboutPage = () => {
   return (
     <div>
-      <h1 className="text-md font-normal flex justify-center items-center">
+      <h1 className="text-center font-semibold text-3xl mb-1 text-secondary">About</h1>
+      <h3 className="text-md font-normal flex justify-center items-center">
         <Link
           className="hover:text-[#2030e0] duration-300 flex items-center gap-1.5"
           to="/"
         >
-          <FaHome size={20} />
+          <FaHome size={18} />
           Home
         </Link>{" "}
         <MdNavigateNext size={22} />{" "}
         <span className="text-[#2030e0]">About</span>
-      </h1>
+      </h3>
       <div className="mt-20 mb-32">
         <div className="mb-10">
         <Principal />
