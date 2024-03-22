@@ -1,7 +1,7 @@
 import React from "react";
 import { FaShapes } from "react-icons/fa6";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
-import img from "../assets/teachers/principal2.png";
+import img from "../assets/teachers/principal.png";
 
 const Principal = () => {
   return (

@@ -5,7 +5,7 @@ import { IoMdMailUnread } from "react-icons/io";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#f4f5f8] pt-20 pb-8">
+    <footer className="bg-[#f4f5f8] pt-20 pb-6">
       <div className="max-width">
         <div className="flex md:flex-row flex-col gap-6 justify-between pb-10 sm:pb-14 border-b border-gray-300">
           <div className="flex gap-4 items-center">

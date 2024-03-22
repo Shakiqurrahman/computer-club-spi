@@ -33,7 +33,7 @@ const FAQs = () => {
   ];
   return (
     <section>
-      <h1 className="text-center text-secondary text-4xl font-semibold mb-10">
+      <h1 className="text-center text-secondary text-2xl sm:text-4xl font-semibold mb-10">
         Freequently Asked Questions
       </h1>
       <div className="grid place-items-center">

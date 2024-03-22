@@ -3,6 +3,8 @@ import HomePage from "../Pages/HomePage";
 import ErrorPage from "../components/shared/ErrorPage";
 import Layout from "./layout";
 import AboutPage from "../Pages/AboutPage";
+import EventPage from "../Pages/EventPage";
+import ContactPage from "../Pages/ContactPage";
 
 export const router = createBrowserRouter([
   {
@@ -15,7 +17,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/events",
-        element: <div>Hello events page!</div>,
+        element: <EventPage />,
       },
       {
         path: "/about",
@@ -23,7 +25,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <div>Hello contact page!</div>,
+        element: <ContactPage />,
       },
     ],
   },

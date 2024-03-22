@@ -36,7 +36,7 @@ const OurActivities = () => {
   return (
     <div>
       <p className="text-gray-500 font-thin text-cente">OUR</p>
-      <h2 className="text-[45px] text-secondary font-semibold text-cente">Activities</h2>
+      <h2 className="text-3xl sm:text-[45px] text-secondary font-semibold text-cente">Activities</h2>
       <div className="mt-8 grid lg:grid-cols-4 grid-cols-2 text-center gap-6">
         {activitiesData.map((data) => (
           <div key={data.id} className="p-5 hover:bg-gray-200/75 border border-gray-300  hover:border-secondary rounded-md duration-300">
