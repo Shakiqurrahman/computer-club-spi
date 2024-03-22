@@ -12,6 +12,10 @@ body {
   max-width: 100%;
 }
 
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
+
 /* Additonal custom styles  */
 
 .max-width {

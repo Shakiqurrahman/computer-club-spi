@@ -17,7 +17,11 @@ const Hero = () => {
           </div>
           <div className="w-full">
             <p className=" text-justify">
-              Established in 2023, our computer club is a dynamic community of
+              Welcome to the Sylhet Polytechnic Institute (SPI) Computer Club, a
+              dynamic and student-driven non-profit and non-political
+              organization operating in collaboration with the Department of
+              Computer Science and Engineering (CSE) at the esteemed Sylhet
+              Polytechnic Institute. Our computer club is a dynamic community of
               tech enthusiasts, programmers, and innovators dedicated to
               exploring the ever-evolving world of technology. From coding
               workshops to hackathons, we provide a platform for members to

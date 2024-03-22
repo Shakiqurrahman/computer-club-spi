@@ -6,6 +6,7 @@ import OurMission from "../components/OurMission";
 import OurVision from "../components/OurVision";
 import Principal from "../components/Principal";
 import CheifInstructors from "../components/CheifInstructors";
+import FAQs from "../components/FAQs";
 
 const AboutPage = () => {
   return (
@@ -32,6 +33,9 @@ const AboutPage = () => {
       </div>
       <div className="my-32">
         <OurVision />
+      </div>
+      <div className="my-32">
+        <FAQs />
       </div>
     </div>
   );

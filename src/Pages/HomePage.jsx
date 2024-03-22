@@ -1,3 +1,4 @@
+import FAQs from "../components/FAQs";
 import Hero from "../components/Hero";
 import OurActivities from "../components/OurActivities";
 import OurMission from "../components/OurMission";
@@ -19,6 +20,9 @@ const HomePage = () => {
       </div>
       <div className="my-32">
       <OurVision />
+      </div>
+      <div className="my-32">
+      <FAQs />
       </div>
     </div>
   );
