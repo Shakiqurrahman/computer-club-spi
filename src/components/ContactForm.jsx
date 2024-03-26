@@ -4,7 +4,7 @@ import contactGIF from "../assets/GIF/contact.json";
 
 const ContactForm = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center sm:gap-20 gap-10">
+    <div className="flex flex-col lg:flex-row items-center justify-center sm:gap-10">
       <div className="w-full lg:w-[90%] flex justify-center">
         <Lottie animationData={contactGIF} />
       </div>
@@ -52,7 +52,7 @@ const ContactForm = () => {
         ></textarea>
         <button
           type="submit"
-          className="mt-3 py-3 px-4 w-48 mx-auto border border-transparent text-white bg-blue-600 hover:bg-white hover:text-blue-600 hover:border-blue-600 text-lg font-semibold  rounded-md duration-300 "
+          className="mt-3 py-3 px-4 w-full border border-transparent text-white bg-blue-600 hover:bg-white hover:text-blue-600 hover:border-blue-600  text-lg font-semibold  rounded-md duration-300 "
         >
           Send Message
         </button>
