@@ -31,11 +31,13 @@ const CheifInstructors = () => {
     <div className="flex flex-col md:flex-row gap-10">
       {chiefInstructorsData.map((data) => (
         <div
-          className="w-full flex flex-col justify-center items-center bg-[#f5faff] sm:p-16 px-5 py-14 rounded-[30px] drop-shadow-2xl shadow-md border border-gray-300 hover:border-secondary duration-300"
+          className="w-full flex flex-col justify-center items-center bg-[#f6f5f1]  sm:p-16 px-5 py-14 rounded-[30px] drop-shadow-2xl shadow-md border border-gray-300 hover:border-secondary duration-300 relative overflow-hidden"
           key={data.id}
         >
+          <div className="w-full h-[36%] bg-slate-200 absolute top-0 -z-10 opacity-50"></div>
+      <div className="w-full h-1/3 bg-slate-200 absolute top-0 -z-10 opacity-100"></div>
           <img
-            className="rounded-full w-[150px] ring-2 ring-[#2030e0] ring-offset-2"
+            className="bg-white rounded-full w-[150px] ring-2 ring-[#2030e0] ring-offset-2"
             src={data.img}
             alt="Cheif Instructor Image"
           />

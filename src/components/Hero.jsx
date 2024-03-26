@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import computerGIF from "../assets/computer.json";
+import computerGIF from "../assets/GIF/computer.json";
 
 const Hero = () => {
   return (
