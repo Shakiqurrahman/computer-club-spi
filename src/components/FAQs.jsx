@@ -37,7 +37,7 @@ const FAQs = () => {
         Freequently Asked Questions
       </h1>
       <div className="grid place-items-center">
-        <div className="sm:px-[40px] max-w-[1100px]">
+        <div className="max-w-[1100px] bg-slate-100 rounded-xl p-6 sm:p-12">
           {accordionData.map((data, index) => {
             return (
               <Accordion

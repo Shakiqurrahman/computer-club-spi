@@ -121,8 +121,9 @@ body {
   }
 
   .side-nav li,
-  .nav-links li {
+  .nav-links li{
     padding: 15px 40px 5px;
+    font-size: 18px;
   }
 
 }

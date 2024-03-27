@@ -37,7 +37,7 @@ const CheifInstructors = () => {
           <svg className="absolute top-0 -z-10" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
             <path
               d="M0,100 C150,200 250,0 550,200 L500,00 L0,0 Z"
-              style={{stroke: 'none', fill:'#a0b3b7'}}
+              style={{stroke: 'none', fill:'#e2e8f0'}}
             ></path>
           </svg>
           {/* </div> */}

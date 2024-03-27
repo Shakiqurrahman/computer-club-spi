@@ -20,30 +20,40 @@ const Header = () => {
           <ul
             className={
               isOpen
-                ? "side-nav text-[15px]"
+                ? "side-nav"
                 : "nav-links  md:flex gap-x-10 text-[15px]"
             }
           >
+            <NavLink to="/">
             <li className="hover:text-[#2030e0] duration-300"
             onClick={handleClose}>
-              <NavLink to="/">Home</NavLink>
+              Home
             </li>
+            </NavLink>
+            <NavLink to="/events">
             <li className="hover:text-[#2030e0] duration-300"
             onClick={handleClose}>
-              <NavLink to="/events">Events</NavLink>
+              Events
             </li>
+            </NavLink>
+            <NavLink to="/notice">
             <li className="hover:text-[#2030e0] duration-300"
             onClick={handleClose}>
-              <NavLink to="/notice">Notice</NavLink>
+              Notice
             </li>
+            </NavLink>
+            <NavLink to="/result">
             <li className="hover:text-[#2030e0] duration-300"
             onClick={handleClose}>
-              <NavLink to="/result">Result</NavLink>
+              Result
             </li>
+            </NavLink>
+            <NavLink to="/about">
             <li className="hover:text-[#2030e0] duration-300"
             onClick={handleClose}>
-              <NavLink to="/about">About</NavLink>
+              About
             </li>
+            </NavLink>
 
             <li className="hover:text-[#2030e0] duration-300"
             onClick={handleClose}>
