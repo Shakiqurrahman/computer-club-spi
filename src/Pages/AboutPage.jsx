@@ -25,19 +25,19 @@ const AboutPage = () => {
         <MdNavigateNext size={22} />{" "}
         <span className="text-[#2030e0]">About</span>
       </h3>
-      <div className="mt-20 mb-32">
+      <div className="mt-20 mb-20 sm:mb-32">
         <div className="mb-10">
           <Principal />
         </div>
         <CheifInstructors />
       </div>
-      <div className="my-32">
+      <div className="my-16 sm:my-32">
         <OurMission />
       </div>
-      <div className="my-32">
+      <div className="my-16 sm:my-32">
         <OurVision />
       </div>
-      <div className="my-32">
+      <div className="my-16 sm:my-32">
         <FAQs />
       </div>
     </>

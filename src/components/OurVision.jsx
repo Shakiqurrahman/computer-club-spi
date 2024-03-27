@@ -10,7 +10,7 @@ const OurVision = () => {
       </div>
       <div className="w-full">
         <h1 className="text-3xl sm:text-4xl font-semibold mb-4 text-secondary">
-          Our Mission
+          Our Vision
         </h1>
         <p className="text-justify leading-relaxed">
           Our vision is create a community of passionate learners and problem solvers who are equipped with the knowledge and practical experience to tackle the challenges of the digital era. We aspire to cultivate a culture of continuous learning, critical thinking and innovation within the club. Through various activities and initiatives, we aim to bridge the gap between theory and practice, enabling our members to apply their skills in practical scenarios. 

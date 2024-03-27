@@ -33,48 +33,52 @@ body {
 /* hamburger menu */
 
 .hamburger {
-  width: 24px;
-  height: 2px;
+  width: 23px;
+  height: 1.6px;
   background: white;
   border-radius: 3px;
   transition: all 0.5s ease-in-out;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .hamburger::before {
   content: "";
   position: absolute;
-  width: 24px;
-  height: 2px;
+  width: 23px;
+  height: 1.6px;
   background: white;
   border-radius: 3px;
   transition: all 0.5s ease-in-out;
-  transform: translateY(-8px);
+  transform: translateY(-7px);
 }
 
 .hamburger::after {
   content: "";
   position: absolute;
-  width: 24px;
-  height: 2px;
+  width: 23px;
+  height: 1.6px;
   background: white;
   border-radius: 3px;
   transition: all 0.5s ease-in-out;
-  transform: translateY(8px);
+  transform: translateY(7px);
 }
 
 .active-hamburger {
-  width: 24px;
-  height: 2px;
+  width: 23px;
+  height: 1.6px;
   background: transparent;
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .active-hamburger::before {
   content: "";
   position: absolute;
-  width: 24px;
-  height: 2px;
+  width: 23px;
+  height: 1.6px;
   background: white;
   border-radius: 3px;
   transition: all 0.4s ease-in-out;
@@ -84,15 +88,15 @@ body {
 .active-hamburger::after {
   content: "";
   position: absolute;
-  width: 24px;
-  height: 2px;
+  width: 23px;
+  height: 1.6px;
   background: white;
   border-radius: 3px;
   transition: all 0.4s ease-in-out;
   transform: rotate(45deg);
 }
 
-@media (576px >= width) {
+@media (768px >= width) {
   .nav-links {
     position: absolute;
     flex-direction: column;

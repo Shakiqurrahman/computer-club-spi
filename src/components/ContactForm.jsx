@@ -8,7 +8,7 @@ const ContactForm = () => {
       <div className="w-full lg:w-[90%] flex justify-center">
         <Lottie animationData={contactGIF} />
       </div>
-      <form className="w-full flex flex-col gap-5  bg-[#e8e4fb]/85 rounded-[30px] sm:p-16 p-8">
+      <form className="w-full flex flex-col gap-5 bg-[#e8e4fb]/50 md:bg-[#e8e4fb]/85 rounded-[30px] sm:p-16 p-8">
         <div className="mb-5">
           {/* <p className="text-center uppercase tracking-widest mb-1 text-secondary">
               Any Query?
