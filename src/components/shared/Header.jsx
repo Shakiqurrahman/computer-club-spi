@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
 const Header = () => {
@@ -11,8 +11,16 @@ const Header = () => {
           <img className="h-10" src={logo} alt="Logo" />
           <h1 className="text-lg font-semibold font-poppins">Computer Club</h1>
         </div>
+
         <nav>
-          <ul className="hidden sm:flex gap-x-10 text-[15px]">
+
+          <ul
+            className={
+              isOpen
+                ? "side-nav text-[15px]"
+                : "nav-links  md:flex gap-x-10 text-[15px]"
+            }
+          >
             <li className="hover:text-[#2030e0] duration-300">
               <NavLink to="/">Home</NavLink>
             </li>
@@ -34,6 +42,12 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+        <div
+          className="md:hidden size-9 px-1 bg-secondary rounded-[4px] cursor-pointer flex justify-center items-center"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <div className={isOpen ? "active-hamburger" : "hamburger"}></div>
+        </div>
       </div>
     </header>
   );
