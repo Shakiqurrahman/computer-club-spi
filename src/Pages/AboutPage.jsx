@@ -7,6 +7,7 @@ import FAQs from "../components/FAQs";
 import OurMission from "../components/OurMission";
 import OurVision from "../components/OurVision";
 import Principal from "../components/Principal";
+import Developers from "../components/Developers";
 
 const AboutPage = () => {
   return (
@@ -31,11 +32,15 @@ const AboutPage = () => {
         </div>
         <CheifInstructors />
       </div>
+     
       <div className="my-16 sm:my-32">
         <OurMission />
       </div>
       <div className="my-16 sm:my-32">
         <OurVision />
+      </div>
+      <div className="my-16 sm:my-32">
+        <Developers />
       </div>
       <div className="my-16 sm:my-32">
         <FAQs />

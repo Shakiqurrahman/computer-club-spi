@@ -9,10 +9,10 @@ const Header = () => {
   }
   return (
     <header className="bg-white fixed top-0 z-10 w-full">
-      <div className="max-width bg-white flex h-16 w-full justify-between items-center border-b ">
+      <div className="max-width bg-white flex h-20 w-full justify-between items-center border-b ">
         <div className="flex items-center">
-          <img className="h-10" src={logo} alt="Logo" />
-          <h1 className="text-lg font-semibold font-poppins">Computer Club</h1>
+          <img className="h-14" src={logo} alt="Logo" />
+          <h1 className="text-lg font-semibold font-poppins"></h1>
         </div>
 
         <nav>
