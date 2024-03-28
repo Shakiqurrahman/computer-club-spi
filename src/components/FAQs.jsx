@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Accordion from "./Accordion";
 
 const FAQs = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(0);
 
   const toggle = (index) => {
     if (open === index) {
