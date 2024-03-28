@@ -1,7 +1,7 @@
 import React from "react";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
-import img1 from "../assets/teachers/CI-Mam.png";
-import img2 from "../assets/teachers/Ci-sir.png";
+import img1 from "../assets/teachers/CI-Mam.webp";
+import img2 from "../assets/teachers/Ci-sir.webp";
 
 const CheifInstructors = () => {
   const chiefInstructorsData = [

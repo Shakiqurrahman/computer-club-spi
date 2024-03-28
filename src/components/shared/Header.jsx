@@ -25,7 +25,7 @@ const Header = () => {
             }
           >
             <NavLink to="/">
-            <li className="hover:text-[#2030e0] duration-300"
+            <li className="hover:text-[#2030e0] duration-300"ppr
             onClick={handleClose}>
               Home
             </li>
