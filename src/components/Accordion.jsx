@@ -6,7 +6,7 @@ const Accordion = ({ open, question, answer, toggle }) => {
   return (
     <div>
       <div
-        className=" py-[15px] gap-4  flex justify-between items-center cursor-pointer"
+        className=" py-[15px] gap-4  flex justify-between items-center cursor-pointer "
         onClick={toggle}
       >
         <p className="text-[16px] sm:text-xl font-semibold">{question}</p>

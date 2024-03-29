@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Accordion from "./Accordion";
 
 const FAQs = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(0);
 
   const toggle = (index) => {
     if (open === index) {
@@ -37,7 +37,7 @@ const FAQs = () => {
         Freequently Asked Questions
       </h1>
       <div className="grid place-items-center">
-        <div className="max-w-[1100px] bg-slate-100 rounded-xl p-6 sm:p-12">
+        <div className=" bg-[#f4f5f8] rounded-xl p-6 sm:p-12">
           {accordionData.map((data, index) => {
             return (
               <Accordion

@@ -3,6 +3,7 @@ import { FaHome } from "react-icons/fa";
 import { MdNavigateNext } from "react-icons/md";
 import { Link } from "react-router-dom";
 import CheifInstructors from "../components/CheifInstructors";
+import Developers from "../components/Developers";
 import FAQs from "../components/FAQs";
 import OurMission from "../components/OurMission";
 import OurVision from "../components/OurVision";
@@ -31,11 +32,15 @@ const AboutPage = () => {
         </div>
         <CheifInstructors />
       </div>
+
       <div className="my-16 sm:my-32">
         <OurMission />
       </div>
       <div className="my-16 sm:my-32">
         <OurVision />
+      </div>
+      <div className="my-16 sm:my-32">
+        <Developers />
       </div>
       <div className="my-16 sm:my-32">
         <FAQs />

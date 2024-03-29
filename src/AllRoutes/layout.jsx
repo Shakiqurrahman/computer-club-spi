@@ -5,7 +5,7 @@ import Footer from "../components/shared/Footer";
 const Layout = () => {
   return (
     <>
-      <div className="h-16 mb-10">
+      <div className="h-20 mb-10">
         <Header />
       </div>
       <div className="max-width">
