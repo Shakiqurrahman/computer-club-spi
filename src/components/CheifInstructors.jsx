@@ -34,18 +34,27 @@ const CheifInstructors = () => {
           key={data.id}
         >
           {/* <div className="w-full h-1/3 bg-[#a0b3b7] absolute top-0 -z-10"> */}
-          <svg className="absolute top-0 -z-10" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+          <svg
+            className="absolute top-0 -z-10"
+            viewBox="0 0 500 500"
+            preserveAspectRatio="xMinYMin meet"
+          >
             <path
               d="M0,100 C150,200 250,0 550,200 L500,00 L0,0 Z"
-              style={{stroke: 'none', fill:'#e2e8f0'}}
+              style={{ stroke: "none", fill: "#e2e8f0" }}
             ></path>
           </svg>
           {/* </div> */}
-          <img
-            className="bg-white rounded-full w-[150px] ring-2 ring-[#2030e0] ring-offset-2"
-            src={data.img}
-            alt="Cheif Instructor Image"
-          />
+ 
+          {data.img ? (
+            <img
+              className=" rounded-full min-w-[150px] max-w-[150px] object-contain ring ring-[#2030e0] ring-offset-2"
+              src={data.img}
+              alt="Cheif Instructor Image"
+            />
+          ) : (
+            <div className="min-w-[150px] max-w-[150px] bg-slate-200 animate-pulse min-h-[150px] rounded-full"></div>
+          )}
           <p className="text-center mt-6">
             <RiDoubleQuotesL color="#2030e0" size={20} className=" inline" />{" "}
             {data.desq}{" "}
