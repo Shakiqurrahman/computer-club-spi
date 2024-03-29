@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "lottie-react";
-import contactGIF from "../assets/GIF/Contact.json";
+import contactGIF from "../assets/GIF/contact.json";
 
 const ContactForm = () => {
   return (
