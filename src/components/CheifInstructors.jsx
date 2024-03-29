@@ -47,15 +47,15 @@ const CheifInstructors = () => {
             ></path>
           </svg>
           {/* </div> */}
- 
-          {data.img ? (
+
+          {!data.img ? (
+            <div className="min-w-[150px] max-w-[150px] bg-slate-200 animate-pulse min-h-[150px] rounded-full"></div>
+          ) : (
             <img
               className=" rounded-full min-w-[150px] max-w-[150px] object-contain ring ring-[#2030e0] ring-offset-2"
               src={data.img}
               alt="Cheif Instructor Image"
             />
-          ) : (
-            <div className="min-w-[150px] max-w-[150px] bg-slate-200 animate-pulse min-h-[150px] rounded-full"></div>
           )}
           <p className="text-center mt-6">
             <RiDoubleQuotesL color="#2030e0" size={20} className=" inline" />{" "}

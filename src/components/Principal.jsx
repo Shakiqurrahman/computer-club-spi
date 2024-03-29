@@ -10,14 +10,14 @@ const Principal = () => {
       <div className="size-[300px] -z-10 rounded-full bg-slate-200 absolute -top-24 -right-20"></div>
       {/* <div className="w-full h-[104%] bg-slate-200  absolute -z-10 opacity-50  rotate-45"></div>
       <div className="w-full h-full bg-gradient-to-r from-slate-300 via-green-100 absolute top-0 -z-10 rotate-45"></div> */}
-      {img ? (
+      {!img ? (
+        <div className="min-w-[200px] max-w-[200px] bg-slate-200 animate-pulse min-h-[200px] rounded-full"></div>
+      ) : (
         <img
           className=" rounded-full min-w-[200px] max-w-[200px] ring ring-[#2030e0] ring-offset-2"
           src={img}
           alt="Principal Image"
         />
-      ) : (
-        <div className="min-w-[200px] max-w-[200px] bg-slate-200 animate-pulse min-h-[200px] rounded-full"></div>
       )}
       <p className="text-center mt-6 lg:w-[85%]">
         <RiDoubleQuotesL color="#2030e0" size={20} className=" inline" /> As we
