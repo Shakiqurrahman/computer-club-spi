@@ -36,7 +36,7 @@ const CheifInstructors = () => {
           key={data.id}
         >
           {/* <div className="w-full h-1/3 bg-[#a0b3b7] absolute top-0 -z-10"> */}
-          <svg
+          <svg  
             className="absolute top-0 -z-10"
             viewBox="0 0 500 500"
             preserveAspectRatio="xMinYMin meet"

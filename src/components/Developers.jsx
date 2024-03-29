@@ -72,16 +72,16 @@ const Developers = () => {
           <div className="flex gap-4 mt-5">
             <Link
               target="_blank"
-              to=""
+              to="https://www.facebook.com/soumik.sarkar.16547/"
             >
               <FaFacebookF className="text-black bg-slate-100 p-1.5 rounded-sm size-8 shadow-md hover:bg-blue-600 hover:text-white duration-300" />
             </Link>
-            <Link target="_blank" to="">
+            <Link target="_blank" to="https://github.com/soum-ik/">
               <FaGithub className="text-black bg-slate-100 p-1.5 rounded-sm size-8 shadow-md hover:bg-blue-600 hover:text-white duration-300" />
             </Link>
             <Link
               target="_blank"
-              to=""
+              to="https://www.linkedin.com/in/soumik-sarkar-a3b438290/"
             >
               <FaLinkedin className="text-black bg-slate-100 p-1.5 rounded-sm size-8 shadow-md hover:bg-blue-600 hover:text-white duration-300" />
             </Link>
