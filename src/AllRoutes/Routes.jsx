@@ -5,6 +5,7 @@ import Layout from "./layout";
 import AboutPage from "../Pages/AboutPage";
 import EventPage from "../Pages/EventPage";
 import ContactPage from "../Pages/ContactPage";
+import Dashboard from "../dashboard/Dashboard";
 
 export const router = createBrowserRouter([
   {
@@ -32,5 +33,10 @@ export const router = createBrowserRouter([
   {
     path: "*",
     element: <ErrorPage />,
+  },
+
+  {
+    path: "/admin/dashboard",
+    element: <Dashboard />,
   },
 ]);
