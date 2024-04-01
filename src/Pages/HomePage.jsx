@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import OurActivities from "../components/OurActivities";
 import OurMission from "../components/OurMission";
 import OurVision from "../components/OurVision";
+import ResultBanner from "../components/ResultBanner";
 import WhyJoinUs from "../components/WhyJoinUs";
 
 const HomePage = () => {
@@ -11,6 +12,9 @@ const HomePage = () => {
       <Hero />
       <div className="my-16 sm:my-32">
         <WhyJoinUs />
+      </div>
+      <div className="my-16 sm:my-32">
+        <ResultBanner />
       </div>
       <div className="my-16 sm:my-32">
         <OurActivities />
