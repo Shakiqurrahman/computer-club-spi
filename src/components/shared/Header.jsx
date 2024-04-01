@@ -42,10 +42,10 @@ const Header = () => {
               Notice
             </li>
             </NavLink>
-            <NavLink to="/result">
+            <NavLink to="/results">
             <li className="hover:text-[#2030e0] duration-300"
             onClick={handleClose}>
-              Result
+              Results
             </li>
             </NavLink>
             <NavLink to="/about">
