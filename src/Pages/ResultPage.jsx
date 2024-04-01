@@ -21,7 +21,7 @@ const ResultPage = () => {
         <MdNavigateNext size={22} />
         <span className="text-[#2030e0]">Results</span>
       </h3>
-      <div className="mt-6 mb-32">
+      <div className="mt-8 mb-32">
         <ResultHero />
       </div>
     </>

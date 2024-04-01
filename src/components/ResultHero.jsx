@@ -5,13 +5,13 @@ const ResultHero = () => {
   return (
     <section className="flex flex-col md:flex-row  items-center gap-6 sm:gap-16">
       <div className="w-full">
-        <img className="w-[80%]" src={resultImg} alt="Image" />
+        <img className="w-full sm:w-[80%]" src={resultImg} alt="Image" />
       </div>
       <div className="w-full">
         <h2 className="text-center text-3xl font-semibold text-secondary">Get Your Result</h2>
-        <p className="text-center text-sm font-semibold mb-8">by just One Click!</p>
+        <p className="text-center text-sm font-semibold mb-4">by just One Click!</p>
 
-        <form className="max-w-md mx-auto bg-[#f6f5f1] p-10 rounded-2xl">
+        <form className="max-w-md mx-auto bg-[#f6f5f1] p-8 rounded-2xl">
           <label htmlFor="exam" className="block mb-2 text-sm font-medium">
             Exam
           </label>

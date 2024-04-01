@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
 const Header = () => {
@@ -11,8 +11,9 @@ const Header = () => {
     <header className="bg-white fixed top-0 z-10 w-full">
       <div className="max-width bg-white flex h-20 w-full justify-between items-center border-b ">
         <div className="flex items-center">
+          <Link to='/'>
           <img className="h-14" src={logo} alt="Logo" />
-          <h1 className="text-lg font-semibold font-poppins"></h1>
+          </Link>
         </div>
 
         <nav>
