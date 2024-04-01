@@ -6,6 +6,7 @@ import AboutPage from "../Pages/AboutPage";
 import EventPage from "../Pages/EventPage";
 import ContactPage from "../Pages/ContactPage";
 import Dashboard from "../dashboard/Dashboard";
+import ResultPage from "../Pages/ResultPage";
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ export const router = createBrowserRouter([
       {
         path: "/events",
         element: <EventPage />,
+      },
+      {
+        path: "/results",
+        element: <ResultPage />,
       },
       {
         path: "/about",
