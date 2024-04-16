@@ -1,6 +1,20 @@
 import React from "react";
 
-const ResultModal = ({toggle}) => {
+const ResultModal = ({ toggle, resultData }) => {
+  const { passed, result } = resultData;
+  console.log(typeof result);
+  try {
+    if (typeof result === "object") {
+      console.log("It's an object");
+    } else if (Array.isArray(result)) {
+      console.log("It's an array");
+    } else {
+      console.log("It's neither an object nor an array");
+    }
+  } catch (error) {
+    console.log(error);
+  }
+
   return (
     <div>
       <div
@@ -15,7 +29,7 @@ const ResultModal = ({toggle}) => {
                 Your BTEB Result
               </h3>
               <button
-              onClick={toggle}
+                onClick={toggle}
                 type="button"
                 className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
                 data-modal-hide="default-modal"
@@ -39,9 +53,9 @@ const ResultModal = ({toggle}) => {
               </button>
             </div>
             <div className="p-4 md:p-5 space-y-4">
-                <p>Status : Passed</p>
+              <p>Status : {passed ? "Passed" : "Fail"}</p>
               <p className="text-base leading-relaxed text-blue-500  ">
-                Result: 4.00
+                Result: {result}
               </p>
             </div>
           </div>
