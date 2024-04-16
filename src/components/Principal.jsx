@@ -1,23 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaShapes } from "react-icons/fa6";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 import img from "../assets/teachers/principal.webp";
 
 const Principal = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Function to handle image load
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
   return (
     <div className="flex flex-col justify-center items-center bg-[#f6f5f1] sm:p-20 px-5 py-14 rounded-[30px] drop-shadow-2xl shadow-md border border-gray-300 lg:hover:border-secondary duration-300 relative overflow-hidden">
       <div className="size-[300px] -z-10 rounded-full bg-slate-200/70 absolute -top-40 right-16"></div>
       <div className="size-[300px] -z-10 rounded-full bg-slate-200 absolute -top-24 -right-20"></div>
 
-      {!img ? (
+      {isLoading && (
         <div className="min-w-[200px] max-w-[200px] bg-slate-200 animate-pulse min-h-[200px] rounded-full"></div>
-      ) : (
-        <img
+      )}
+      <img
           className=" rounded-full min-w-[200px] max-w-[200px] ring ring-[#2030e0] ring-offset-2"
           src={img}
           alt="Principal Image"
+          onLoad={handleImageLoad}
         />
-      )}
       <p className="text-center mt-6 lg:w-[85%]">
         <RiDoubleQuotesL color="#2030e0" size={20} className=" inline" /> As we
         embark on another exciting chapter in the journey of the SPI Computer
