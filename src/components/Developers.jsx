@@ -3,6 +3,7 @@ import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import img1 from "../assets/developers/shake-b&w.png";
 import img2 from "../assets/developers/soumik.png";
+import ResultModal from "./ResultModal";
 
 const Developers = () => {
   return (
@@ -11,7 +12,7 @@ const Developers = () => {
         " Meet The <span className="text-blue-600">Developers</span> "
       </h1>
       <div className="flex flex-col md:flex-row gap-10">
-        {/* <div className="w-full flex flex-col justify-center items-center bg-white  sm:p-16 px-5 py-10 rounded-[30px] drop-shadow-2xl shadow-md border border-gray-300 hover:border-secondary duration-300 relative overflow-hidden">
+        <div className="w-full flex flex-col justify-center items-center bg-white  sm:p-16 px-5 py-10 rounded-[30px] drop-shadow-2xl shadow-md border border-gray-300 hover:border-secondary duration-300 relative overflow-hidden">
         <svg className="absolute top-0 -z-10" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
             <path
               d="M0,100 C150,200 250,0 550,200 L500,00 L0,0 Z"
@@ -48,7 +49,7 @@ const Developers = () => {
               <FaLinkedin className="text-black bg-slate-100 p-1.5 rounded-sm size-8 shadow-md hover:bg-blue-600 hover:text-white duration-300" />
             </Link>
           </div>
-        </div> */}
+        </div>
         <div className="w-full flex flex-col justify-center items-center bg-white  sm:p-16 px-5 py-10 rounded-[30px] drop-shadow-2xl shadow-md border border-gray-300 hover:border-secondary duration-300 relative overflow-hidden">
           <svg
             className="absolute top-0 -z-10"
@@ -89,33 +90,6 @@ const Developers = () => {
             >
               <FaLinkedin className="text-black bg-slate-100 p-1.5 rounded-sm size-8 shadow-md hover:bg-blue-600 hover:text-white duration-300" />
             </Link>
-          </div>
-        </div>
-
-        {/* just trying another design  */}
-        <div className="relative w-full flex flex-col justify-center items-center mt-24">
-          <div className="w-2/5 bg-slate-500 rounded-lg absolute -top-24">
-            <img src={img1} alt="" />
-          </div>
-          <div className="bg-slate-200 w-full h-[320px] p-10 flex-col flex justify-center items-center rounded-[30px] shadow-2xl">
-            <h2 className="mt-10 text-lg sm:text-xl font-bold text-[#2030e0] flex items-center gap-2">
-              Soumik Sarkar
-            </h2>
-            <p className="text-[12px] sm:text-sm tracking-wider font-semibold uppercase ">
-              Web developer
-            </p>
-
-            <div className="flex gap-4 mt-5">
-              <Link target="_blank" to="">
-                <FaFacebookF className="text-black bg-slate-100 p-1.5 rounded-sm size-8 shadow-md hover:bg-blue-600 hover:text-white duration-300" />
-              </Link>
-              <Link target="_blank" to="">
-                <FaGithub className="text-black bg-slate-100 p-1.5 rounded-sm size-8 shadow-md hover:bg-blue-600 hover:text-white duration-300" />
-              </Link>
-              <Link target="_blank" to="">
-                <FaLinkedin className="text-black bg-slate-100 p-1.5 rounded-sm size-8 shadow-md hover:bg-blue-600 hover:text-white duration-300" />
-              </Link>
-            </div>
           </div>
         </div>
       </div>
