@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const ResultModal = ({ toggle, resultData }) => {
+const ResultModal = ({ toggle, resultData, rollNumber }) => {
   const { passed, result } = resultData;
+
+  const [numOfSubF, setNumOfSubF] = useState(0);
+
+  useEffect(() => {
+    if (!passed) {
+      // Calculate the number of subjects yet to pass
+      const length = result.length;
+      setNumOfSubF(length);
+    }
+  }, [passed, result.length]);
+
   console.log(typeof result);
   try {
     if (typeof result === "object") {
@@ -52,11 +63,38 @@ const ResultModal = ({ toggle, resultData }) => {
                 <span className="sr-only">Close modal</span>
               </button>
             </div>
-            <div className="p-4 md:p-5 space-y-4">
-              <p>Status : {passed ? "Passed" : "Fail"}</p>
-              <p className="text-base leading-relaxed text-blue-500  ">
-                Result: {result}
+            <div className="p-4 md:p-8">
+              <h3 className="text-2xl font-semibold text-center mb-2">
+                Roll : {rollNumber}
+              </h3>
+              <p className="text-center text-gray-600">
+                Results Of Diploma In Engineering{" "}
               </p>
+              <p className="text-center text-gray-600">
+                Sylhet Polytechnic Institute, Sylhet
+              </p>
+              <div className=" bg-gray-200/70 rounded-xl mt-10 p-4">
+                <div className="flex justify-between mb-8">
+                  <p>Semester : 6th</p>
+                  <p>
+                    Status :{" "}
+                    <span
+                      className={`${
+                        passed ? "text-[#05e476]" : "text-red-600"
+                      }`}
+                    >
+                      {passed ? "Passed" : numOfSubF+' subject yet to pass'}
+                    </span>
+                  </p>
+                </div>
+                {
+                  passed ? <h3 className="text-[35px] leading-relaxed text-center text-[#05e476]">
+                  {result}
+                </h3> : <h3 className="text-[30px] leading-relaxed text-center">
+                  Failed In <span className="text-red-500">{result}</span>
+                </h3>
+                }
+              </div>
             </div>
           </div>
         </div>

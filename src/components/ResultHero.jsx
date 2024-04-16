@@ -11,6 +11,7 @@ const ResultHero = () => {
 
   const handleModal = async (e) => {
     e.preventDefault();
+    setError('');
     try {
       const { data } = await axios(
         `https://spi-computer-club-backend.vercel.app/api/result/${rollNumber}`
@@ -77,7 +78,7 @@ const ResultHero = () => {
             onChange={(e) => setRollNumber(e.target.value)}
             name="RollNo"
             id="RollNo"
-            placeholder="Enter your result"
+            placeholder="Enter Your Roll Number"
             required
           />
           <button
@@ -86,11 +87,12 @@ const ResultHero = () => {
           >
             Send Message
           </button>
+        {error && <p className="text-red-500 mt-2 text-center">{error}</p>}
         </form>
-        {error && <p className="text-red-500 mt-2">{error}</p>}
         {openModal && (
           <ResultModal
             resultData={resultData}
+            rollNumber={rollNumber}
             toggle={() => setOpenModal(false)}
           />
         )}
