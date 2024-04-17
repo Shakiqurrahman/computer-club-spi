@@ -25,12 +25,26 @@ const ResultModal = ({ toggle, resultData, rollNumber }) => {
     console.log(error);
   }
 
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (event.target.classList.contains("modal-backdrop")) {
+        toggle(); 
+      }
+    };
+
+    if (toggle) {
+      document.body.addEventListener("click", handleOutsideClick);
+    }
+
+    return () => {
+      document.body.removeEventListener("click", handleOutsideClick);
+    };
+  }, [toggle]);
+
   return (
     <div>
       <div
-        tabIndex="-1"
-        aria-hidden="true"
-        className=" overflow-y-auto bg-[#33333356] overflow-x-hidden fixed z-50 flex justify-center items-center w-full inset-0 h-full"
+        className="modal-backdrop overflow-y-auto bg-[#33333356] overflow-x-hidden fixed z-50 flex justify-center items-center w-full inset-0 h-full"
       >
         <div className="relative p-4 w-full max-w-2xl max-h-full">
           <div className="relative bg-gray-100 rounded-lg shadow">
