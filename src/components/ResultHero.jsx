@@ -89,7 +89,7 @@ const ResultHero = () => {
             type="submit"
             className="mt-6 py-3 px-4 w-full text-sm border border-transparent text-white bg-blue-600 hover:bg-white hover:text-blue-600 hover:border-blue-600 font-semibold  rounded-md duration-300 "
           >
-            Send Message
+            Get Result
           </button>
           {error && <p className="text-red-500 mt-2 text-center">{error}</p>}
         </form>
