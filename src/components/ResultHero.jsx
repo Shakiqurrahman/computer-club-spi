@@ -31,7 +31,7 @@ const ResultHero = () => {
   };
 
   return (
-    <section className="flex flex-col md:flex-row  items-center gap-6 sm:gap-16">
+    <section className="flex flex-col-reverse md:flex-row  items-center gap-6 sm:gap-16">
       <div className="w-full">
         <img className="w-full sm:w-[80%]" src={resultImg} alt="Image" />
       </div>
