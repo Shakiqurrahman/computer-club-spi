@@ -14,7 +14,7 @@ const ResultHero = () => {
     setError('');
     try {
       const { data } = await axios(
-        `https://spi-computer-club-backend.vercel.app/api/result/${rollNumber}`
+        `https://computer-club-spi.onrender.com/api/result/${rollNumber}`
       );
       console.log(data);
       setResultData(data);
