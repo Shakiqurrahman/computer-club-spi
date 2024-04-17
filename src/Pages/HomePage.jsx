@@ -11,10 +11,10 @@ const HomePage = () => {
     <div>
       <Hero />
       <div className="my-16 sm:my-32">
-        <WhyJoinUs />
+        <ResultBanner />
       </div>
       <div className="my-16 sm:my-32">
-        <ResultBanner />
+        <WhyJoinUs />
       </div>
       <div className="my-16 sm:my-32">
         <OurActivities />
