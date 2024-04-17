@@ -7,7 +7,6 @@ const ResultModal = ({ toggle, resultData, rollNumber }) => {
 
   useEffect(() => {
     if (!passed) {
-      // Calculate the number of subjects yet to pass
       const length = result.length;
       setNumOfSubF(length);
     }
