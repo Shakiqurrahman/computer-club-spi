@@ -17,12 +17,12 @@ const ResultHero = () => {
     }
     else {
       try {
+        setOpenModal(true);
         const { data } = await axios(
           `https://computer-club-spi.onrender.com/api/result/${rollNumber}`
         );
         console.log(data);
         setResultData(data);
-        setOpenModal(true);
       } catch (error) {
         console.log(error);
         setError('Result Not Found!')

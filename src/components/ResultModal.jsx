@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 
 const ResultModal = ({ toggle, resultData, rollNumber }) => {
-  const { passed, result, semester } = resultData;
+  // const { passed, result, semester } = resultData;
 
   const [numOfSubF, setNumOfSubF] = useState(0);
 
-  useEffect(() => {
-    if (!passed) {
-      const length = result.length;
-      setNumOfSubF(length);
-    }
-  }, [passed, result.length]);
+  // useEffect(() => {
+  //   if (!passed) {
+  //     const length = result.length;
+  //     setNumOfSubF(length);
+  //   }
+  // }, [passed, result.length]);
 
   console.log(typeof result);
   try {
@@ -28,7 +28,7 @@ const ResultModal = ({ toggle, resultData, rollNumber }) => {
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (event.target.classList.contains("modal-backdrop")) {
-        toggle(); 
+        toggle();
       }
     };
 
@@ -43,9 +43,7 @@ const ResultModal = ({ toggle, resultData, rollNumber }) => {
 
   return (
     <div>
-      <div
-        className="modal-backdrop overflow-y-auto bg-[#33333356] overflow-x-hidden fixed z-50 flex justify-center items-center w-full inset-0 h-full"
-      >
+      <div className="modal-backdrop overflow-y-auto bg-[#33333356] overflow-x-hidden fixed z-50 flex justify-center items-center w-full inset-0 h-full">
         <div className="relative p-4 w-full max-w-2xl max-h-full">
           <div className="relative bg-gray-100 rounded-lg shadow">
             <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
@@ -88,25 +86,49 @@ const ResultModal = ({ toggle, resultData, rollNumber }) => {
               </p>
               <div className=" bg-gray-200/70 rounded-xl mt-10 p-4">
                 <div className="flex justify-between mb-8">
-                  <p>Semester : {semester}</p>
-                  <p>
+                  <p className=" flex items-center justify-center gap-2">
+                    Semester :{" "}
+                    {resultData?.semester ? (
+                      resultData?.semester
+                    ) : (
+                      <p className=" text-center">loading...</p>
+                    )}
+                  </p>
+                  <p className="flex items-center justify-center gap-3">
                     Status :{" "}
-                    <span
-                      className={`${
-                        passed ? "text-[#05e476]" : "text-red-600"
-                      }`}
-                    >
-                      {passed ? "Passed" : numOfSubF+' subject yet to pass'}
-                    </span>
+                    {resultData ? (
+                      <span
+                        className={`${
+                          resultData?.passed ? "text-[#05e476]" : "text-red-600"
+                        }`}
+                      >
+                        {resultData?.passed
+                          ? "Passed"
+                          : numOfSubF + " subject yet to pass"}
+                      </span>
+                    ) : (
+                      <p className=" text-center">loading...</p>
+                    )}
                   </p>
                 </div>
-                {
-                  passed ? <h3 className="text-[35px] leading-relaxed text-center text-[#05e476]">
-                  {result}
-                </h3> : <h3 className="text-[30px] leading-relaxed text-center">
-                  Failed In <span className="text-red-500">{result}</span>
-                </h3>
-                }
+                {resultData ? (
+                  <div>
+                    {resultData?.passed ? (
+                      <h3 className="text-[35px] leading-relaxed text-center text-[#05e476]">
+                        {resultData?.result}
+                      </h3>
+                    ) : (
+                      <h3 className="text-[30px] leading-relaxed text-center">
+                        Failed In{" "}
+                        <span className="text-red-500">
+                          {resultData?.result}
+                        </span>
+                      </h3>
+                    )}
+                  </div>
+                ) : (
+                  <p className=" text-center">loading...</p>
+                )}
               </div>
             </div>
           </div>
