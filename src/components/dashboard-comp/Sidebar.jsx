@@ -32,7 +32,7 @@ const Sidebar = () => {
                       type="text"
                       name="email"
                       id="mobile-search"
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-600 focus:ring-cyan-600 block w-full pl-10 p-2.5"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-600 block w-full pl-10 p-2.5"
                       placeholder="Search"
                     />
                   </div>

@@ -1,7 +1,7 @@
+import axios from "axios";
 import React, { useState } from "react";
 import resultImg from "../assets/result.svg";
 import ResultModal from "../components/ResultModal";
-import axios from "axios";
 
 const ResultHero = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -11,17 +11,22 @@ const ResultHero = () => {
 
   const handleModal = async (e) => {
     e.preventDefault();
-    setError('');
-    try {
-      const { data } = await axios(
-        `https://spi-computer-club-backend.vercel.app/api/result/${rollNumber}`
-      );
-      console.log(data);
-      setResultData(data);
-      setOpenModal(true);
-    } catch (error) {
-      console.log(error);
-      setError("Sorry this is not a vaild roll number");
+    setError("");
+    if (rollNumber.length !== 6) {
+      setError("Roll Must be 6 Digits Long!");
+    }
+    else {
+      try {
+        const { data } = await axios(
+          `https://computer-club-spi.onrender.com/api/result/${rollNumber}`
+        );
+        console.log(data);
+        setResultData(data);
+        setOpenModal(true);
+      } catch (error) {
+        console.log(error);
+        setError('Result Not Found!')
+      }
     }
   };
 
@@ -67,7 +72,6 @@ const ResultHero = () => {
             <option selected>2022</option>
           </select> */}
 
-          
           <label htmlFor="exam" className="block my-2 mt-6 text-sm font-medium">
             Roll Number*
           </label>
@@ -87,7 +91,7 @@ const ResultHero = () => {
           >
             Send Message
           </button>
-        {error && <p className="text-red-500 mt-2 text-center">{error}</p>}
+          {error && <p className="text-red-500 mt-2 text-center">{error}</p>}
         </form>
         {openModal && (
           <ResultModal
