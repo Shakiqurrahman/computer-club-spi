@@ -57,12 +57,10 @@ const ResultModal = ({ toggle, resultData, rollNumber }) => {
 
     if (toggle) {
       document.body.addEventListener("click", handleOutsideClick);
-      document.body.classList.add('modal-open');
     }
 
     return () => {
       document.body.removeEventListener("click", handleOutsideClick);
-      document.body.classList.remove('modal-open');
 
     };
   }, [toggle]);
@@ -119,22 +117,22 @@ const ResultModal = ({ toggle, resultData, rollNumber }) => {
                     {passed ? (
                       <div className="flex items-center gap-1 text-[#22c55e]">
                         <IoIosCheckmarkCircle size={18} />
-                        <p>Passed</p>
+                        <p className="text-[12px] sm:text-base">Passed</p>
                       </div>
                     ) : (
                       <div className="flex items-center gap-1 text-[#ef4444]">
                         <IoIosWarning size={18} />
-                        <p>Referred : {numOfSubF}</p>
+                        <p className="text-[12px] sm:text-base">Referred : {numOfSubF}</p>
                       </div>
                     )}
                   </div>
-                  <p className="font-semibold">
+                  <p className="font-semibold text-[12px] sm:text-base">
                     {semester}
                     {semesterSuffix} Semester
                   </p>
                   <div className="flex items-center gap-1">
                     <FaRegCalendarAlt size={14} />
-                    <p className="text-sm">03 March, 2024</p>
+                    <p className="text-[12px] sm:text-sm">03 March, 2024</p>
                   </div>
                 </div>
                 {passed ? (

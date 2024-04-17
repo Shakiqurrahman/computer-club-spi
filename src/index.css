@@ -40,9 +40,6 @@ body::-webkit-scrollbar-thumb:hover {
   transition: height 500ms;
 }
 
-.modal-open {
-  overflow: hidden;
-}
 
 /* Additonal custom styles  */
 
