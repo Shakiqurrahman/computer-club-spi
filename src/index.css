@@ -12,10 +12,37 @@ body {
   max-width: 100%;
 }
 
+/* CSS for default body scrolling bar */
+body::-webkit-scrollbar,
+.modal-backdrop::-webkit-scrollbar {
+  width: 10px; 
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #f1f1f1; 
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #888; 
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.modal-backdrop::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+
 .ReactCollapse--collapse {
   transition: height 500ms;
 }
 
+.modal-open {
+  overflow: hidden;
+}
 
 /* Additonal custom styles  */
 

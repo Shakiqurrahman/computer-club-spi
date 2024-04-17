@@ -4,6 +4,7 @@ import { IoIosCheckmarkCircle, IoIosWarning } from "react-icons/io";
 
 const ResultModal = ({ toggle, resultData, rollNumber }) => {
   const { passed, result, semester } = resultData;
+  console.log(resultData);
 
   let failSubjects;
   if (!passed) {
@@ -56,18 +57,21 @@ const ResultModal = ({ toggle, resultData, rollNumber }) => {
 
     if (toggle) {
       document.body.addEventListener("click", handleOutsideClick);
+      document.body.classList.add('modal-open');
     }
 
     return () => {
       document.body.removeEventListener("click", handleOutsideClick);
+      document.body.classList.remove('modal-open');
+
     };
   }, [toggle]);
 
   return (
     <div>
-      <div className="modal-backdrop overflow-y-auto bg-[#33333389] overflow-x-hidden fixed z-50 flex justify-center items-center w-full inset-0 h-full">
-        <div className="relative p-4 w-full max-w-2xl max-h-full">
-          <div className="relative bg-[#f3f4f6] rounded-2xl shadow-xl border-2 border-gray-700 ">
+      <div className="modal-backdrop bg-[#33333389] fixed z-50 flex justify-center items-center w-full inset-0 h-full overflow-y-auto">
+        <div className="relative p-4 w-full max-w-2xl max-h-[70vh]">
+          <div className="relative bg-[#f3f4f6] rounded-2xl shadow-xl border-2 border-gray-700">
             <div className="absolute top-0 right-0 p-3">
               <button
                 onClick={toggle}
@@ -153,8 +157,8 @@ const ResultModal = ({ toggle, resultData, rollNumber }) => {
               </div>
             </div>
           </div>
+          </div>
         </div>
-      </div>
     </div>
   );
 };
