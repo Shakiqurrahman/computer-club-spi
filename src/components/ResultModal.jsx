@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const ResultModal = ({ toggle, resultData, rollNumber }) => {
-  const { passed, result } = resultData;
+  const { passed, result, semester } = resultData;
 
   const [numOfSubF, setNumOfSubF] = useState(0);
 
@@ -88,7 +88,7 @@ const ResultModal = ({ toggle, resultData, rollNumber }) => {
               </p>
               <div className=" bg-gray-200/70 rounded-xl mt-10 p-4">
                 <div className="flex justify-between mb-8">
-                  <p>Semester : 6th</p>
+                  <p>Semester : {semester}</p>
                   <p>
                     Status :{" "}
                     <span
