@@ -67,6 +67,11 @@ const ResultModal = ({ rollNumber, resultData, toggle }) => {
     };
   }, [toggle]);
 
+  const handleToggl = async () => {
+    toggle();
+    window.location.reload();
+  };
+
   return (
     <div>
       <div className="modal-backdrop bg-[#33333389] fixed z-50 flex justify-center items-center w-full inset-0 h-full overflow-y-auto">
@@ -74,7 +79,7 @@ const ResultModal = ({ rollNumber, resultData, toggle }) => {
           <div className="relative bg-[#f3f4f6] rounded-2xl shadow-xl ">
             <div className="absolute top-0 right-0 p-3">
               <button
-                onClick={toggle}
+                onClick={handleToggl}
                 type="button"
                 className="text-gray-500 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
               >
