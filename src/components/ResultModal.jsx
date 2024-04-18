@@ -143,14 +143,20 @@ const ResultModal = ({ rollNumber, resultData, toggle, setResultData }) => {
                   ) : (
                     <p>loading....</p>
                   )}
-                  <p className="font-semibold text-[12px] sm:text-base">
+                  {
+                    resultData ? <p className="font-semibold text-[12px] sm:text-base">
                     {resultData?.semester}
                     {semesterSuffix} Semester
-                  </p>
-                  <div className="flex items-center gap-1">
+                  </p> :
+                  <p className="font-semibold text-[12px] sm:text-base">
+                  Loading...
+                </p>
+                  }
+                  {resultData ? <div className="flex items-center gap-1">
                     <FaRegCalendarAlt size={14} />
                     <p className="text-[12px] sm:text-sm">03 March, 2024</p>
-                  </div>
+                  </div> : <p>Loading...</p>
+                  }
                 </div>
 
                 {resultData ? (
