@@ -3,12 +3,9 @@ import { useEffect, useState } from "react";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { IoIosCheckmarkCircle, IoIosWarning } from "react-icons/io";
 
-const ResultModal = ({ rollNumber, resultData, toggle }) => {
+const ResultModal = ({ rollNumber, resultData, toggle, setResultData }) => {
   // const { passed, result, semester } = resultData;
-
-  console.log(rollNumber, "rollNumber data");
-  console.log(resultData, "result data");
-
+  
   let failSubjects;
   if (!resultData?.passed) {
     failSubjects = resultData?.result.map((item) => item.replace("(T)", ""));
@@ -54,7 +51,7 @@ const ResultModal = ({ rollNumber, resultData, toggle }) => {
     const handleOutsideClick = (event) => {
       if (event.target.classList.contains("modal-backdrop")) {
         toggle();
-        window.location.reload();
+        setResultData(null);
       }
     };
 
@@ -69,7 +66,7 @@ const ResultModal = ({ rollNumber, resultData, toggle }) => {
 
   const handleToggl = async () => {
     toggle();
-    window.location.reload();
+    setResultData(null);
   };
 
   return (

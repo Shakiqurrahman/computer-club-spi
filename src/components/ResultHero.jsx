@@ -8,7 +8,7 @@ const ResultHero = () => {
   const [rollNumber, setRollNumber] = useState("");
   const [resultData, setResultData] = useState(null);
   const [error, setError] = useState(null);
-  console.log(rollNumber);
+  console.log(resultData);
 
   const handleModal = async (e) => {
     e.preventDefault();
@@ -95,6 +95,7 @@ const ResultHero = () => {
         </form>
         {!error && openModal && (
           <ResultModal
+            setResultData={setResultData}
             rollNumber={rollNumber}
             resultData={resultData}
             toggle={() => setOpenModal(false)}
