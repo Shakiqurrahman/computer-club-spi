@@ -54,6 +54,7 @@ const ResultModal = ({ rollNumber, resultData, toggle }) => {
     const handleOutsideClick = (event) => {
       if (event.target.classList.contains("modal-backdrop")) {
         toggle();
+        window.location.reload();
       }
     };
 
