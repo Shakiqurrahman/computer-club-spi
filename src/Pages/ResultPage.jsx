@@ -1,4 +1,3 @@
-import React from "react";
 import { FaHome } from "react-icons/fa";
 import { MdNavigateNext } from "react-icons/md";
 import { Link } from "react-router-dom";

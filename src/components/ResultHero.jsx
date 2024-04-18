@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import { useState } from "react";
 import resultImg from "../assets/result.svg";
 import ResultModal from "../components/ResultModal";
 
@@ -8,27 +8,26 @@ const ResultHero = () => {
   const [rollNumber, setRollNumber] = useState("");
   const [resultData, setResultData] = useState(null);
   const [error, setError] = useState(null);
+  console.log(rollNumber);
 
   const handleModal = async (e) => {
     e.preventDefault();
     setError("");
     if (rollNumber.length !== 6) {
       setError("Roll Must be 6 Digits Long!");
-    }
-    else {
+    } else {
       try {
+        setOpenModal(true);
         const { data } = await axios(
           `https://computer-club-spi.onrender.com/api/result/${rollNumber}`
         );
-        console.log(data);
         setResultData(data);
-        setOpenModal(true);
+        console.log(data);
       } catch (error) {
         console.log(error);
-        setError('Result Not Found!')
+        setError("Result Not Found!");
       }
     }
-
   };
 
   return (
@@ -94,10 +93,10 @@ const ResultHero = () => {
           </button>
           {error && <p className="text-red-500 mt-2 text-center">{error}</p>}
         </form>
-        {openModal && (
+        {!error && openModal && (
           <ResultModal
-            resultData={resultData}
             rollNumber={rollNumber}
+            resultData={resultData}
             toggle={() => setOpenModal(false)}
           />
         )}
