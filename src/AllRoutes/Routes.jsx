@@ -7,6 +7,8 @@ import EventPage from "../Pages/EventPage";
 import ContactPage from "../Pages/ContactPage";
 import Dashboard from "../dashboard/Dashboard";
 import ResultPage from "../Pages/ResultPage";
+import DLayout from "./DLayout";
+import DEventPage from "../dashboard/DEventPage";
 
 export const router = createBrowserRouter([
   {
@@ -42,6 +44,15 @@ export const router = createBrowserRouter([
 
   {
     path: "/admin/dashboard",
-    element: <Dashboard />,
-  },
+    element: <DLayout />,
+    children: [
+      {
+        path: "/admin/dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "/admin/dashboard/events",
+        element: <DEventPage />,
+      },
+]},
 ]);

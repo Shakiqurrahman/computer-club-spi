@@ -39,8 +39,8 @@ const Sidebar = () => {
                 </form>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/admin/dashboard"
                   className="text-base text-gray-900 font-normal rounded-lg flex items-center p-2 hover:bg-gray-100 group"
                 >
                   <svg
@@ -53,7 +53,7 @@ const Sidebar = () => {
                     <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
                   </svg>
                   <span className="ml-3">Dashboard</span>
-                </a>
+                </Link>
               </li>
               <li>
                 <Link
