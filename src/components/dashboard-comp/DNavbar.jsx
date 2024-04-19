@@ -17,7 +17,7 @@ const DNavbar = () => {
             onClick={() => setisSide(!isSide)}
             className=" lg:hidden duration-500 ease-in-out"
           >
-            {isSide ? <IoMdMenu size={30} /> : <IoClose size={30} />}
+            {isSide ? <IoClose size={30} /> : <IoMdMenu size={30} />}
           </div>
           <Link
             to="/"
@@ -61,7 +61,7 @@ const DNavbar = () => {
           <FaUserCircle size={30} className="text-secondary" />
         </div>
       </div>
-      {!isSide && <Bar toggol={() => setisSide(!isSide)} />}
+      {isSide && <Bar toggol={() => setisSide(!isSide)} />}
     </nav>
   );
 };
