@@ -39,10 +39,10 @@ export const router = createBrowserRouter([
       },
     ],
   },
-  {
-    path: "*",
-    element: <ErrorPage />,
-  },
+  // {
+  //   path: "*",
+  //   element: <ErrorPage />,
+  // },
 
   {
     path: "/admin/dashboard",
