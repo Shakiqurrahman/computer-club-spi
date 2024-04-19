@@ -31,24 +31,24 @@ const DEventPage = () => {
           <form onSubmit={handleEventForm}>
             <div className="flex flex-col gap-2">
               <input
-                className="border border-secondary p-3 rounded-md"
+                className="focus:outline-none p-3 rounded-md"
                 type="text"
                 placeholder="Event Name"
                 required
               />
               <input
-                className="border border-secondary p-3 rounded-md"
+                className="focus:outline-none p-3 rounded-md"
                 type="text"
                 placeholder="Event Date"
                 required
               />
               <input
-                className="border border-secondary p-3 rounded-md"
+                className="focus:outline-none p-3 rounded-md"
                 type="text"
                 placeholder="Event Time"
               />
               <input
-                className="bg-white border border-secondary p-3 rounded-md"
+                className="bg-white focus:outline-none p-3 rounded-md"
                 type="file"
               />
               <div
@@ -60,7 +60,7 @@ const DEventPage = () => {
       {details.map(detail => (
         <textarea
           key={detail.id}
-          className="border border-secondary p-3 rounded-md resize-none"
+          className="focus:outline-none p-3 rounded-md resize-none"
           name={`detail-${detail.id}`}
           id={`detail-${detail.id}`}
           cols="20"

@@ -10,6 +10,7 @@ import ResultPage from "../Pages/ResultPage";
 import DLayout from "./DLayout";
 import DEventPage from "../dashboard/DEventPage";
 import DNoticePage from "../dashboard/DNoticePage";
+import DTeachersPage from "../dashboard/DTeachersPage";
 
 export const router = createBrowserRouter([
   {
@@ -61,7 +62,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/admin/dashboard/teachers",
-        element: <DEventPage />,
+        element: <DTeachersPage />,
       },
 ]},
 ]);
