@@ -63,8 +63,6 @@ const ResultModal = ({ rollNumber, resultData, toggle, setResultData }) => {
     return () => {
       document.body.removeEventListener("click", handleOutsideClick);
       document.body.classList.remove('modal-open');
-
-
     };
   }, [toggle]);
 
@@ -77,7 +75,7 @@ const ResultModal = ({ rollNumber, resultData, toggle, setResultData }) => {
     <div className="py-20">
       <div className="modal-backdrop bg-[#33333389] fixed z-50 flex justify-center items-center w-full inset-0 h-full">
         <div className="relative p-4 w-full max-w-2xl">
-        <div className="relative bg-[#f3f4f6] rounded-2xl shadow-xl max-h-[60vh] sm:max-h-[70vh]  overflow-y-scroll modal-scroll">
+        <div className="relative bg-[#f3f4f6] rounded-2xl shadow-xl max-h-[65vh] sm:max-h-[75vh]  overflow-y-scroll modal-scroll">
             <div className="absolute top-0 right-0 p-3">
               <button
                 onClick={handleToggle}
