@@ -1,4 +1,3 @@
-import React from "react";
 import DNavbar from "../components/dashboard-comp/DNavbar";
 import Sidebar from "../components/dashboard-comp/Sidebar";
 import DEvents from "../components/dashboard-comp/DEvents";

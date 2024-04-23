@@ -1,4 +1,4 @@
-import React from 'react';
+
 import event1 from '../../assets/dashboard/event1.jpg'
 import event2 from '../../assets/dashboard/event2.jpg'
 
