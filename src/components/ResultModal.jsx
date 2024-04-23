@@ -61,22 +61,23 @@ const ResultModal = ({ rollNumber, resultData, toggle, setResultData }) => {
 
     return () => {
       document.body.removeEventListener("click", handleOutsideClick);
+
     };
   }, [toggle]);
 
-  const handleToggl = async () => {
+  const handleToggle = async () => {
     toggle();
     setResultData(null);
   };
 
   return (
-    <div>
-      <div className="modal-backdrop bg-[#33333389] fixed z-50 flex justify-center items-center w-full inset-0 h-full overflow-y-auto">
-        <div className="relative p-4 w-full max-w-2xl max-h-[70vh]">
-          <div className="relative bg-[#f3f4f6] rounded-2xl shadow-xl ">
+    <div className="py-20">
+      <div className="modal-backdrop bg-[#33333389] fixed z-50 flex justify-center items-center w-full inset-0 h-full">
+        <div className="relative p-4 w-full max-w-2xl">
+        <div className="relative bg-[#f3f4f6] rounded-2xl shadow-xl max-h-[70vh]  overflow-y-auto modal-scroll">
             <div className="absolute top-0 right-0 p-3">
               <button
-                onClick={handleToggl}
+                onClick={handleToggle}
                 type="button"
                 className="text-gray-500 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
               >
