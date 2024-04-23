@@ -57,10 +57,13 @@ const ResultModal = ({ rollNumber, resultData, toggle, setResultData }) => {
 
     if (toggle) {
       document.body.addEventListener("click", handleOutsideClick);
+      document.body.classList.add('modal-open');
     }
 
     return () => {
       document.body.removeEventListener("click", handleOutsideClick);
+      document.body.classList.remove('modal-open');
+
 
     };
   }, [toggle]);

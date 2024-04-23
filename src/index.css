@@ -12,9 +12,13 @@ body {
   max-width: 100%;
 }
 
+.modal-open {
+  overflow: hidden;
+}
+
 /* CSS for default body scrolling bar */
 body::-webkit-scrollbar {
-  width: 10px; 
+  width: 8px; 
 }
 
 body::-webkit-scrollbar-track {
@@ -23,7 +27,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background-color: #888; 
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
