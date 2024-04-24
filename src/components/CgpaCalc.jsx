@@ -208,7 +208,6 @@ function CgpaCalc() {
                 )}
               </button>
             </form>
-           {error && <p className="text-red-500 my-2">{error}</p>}
             <div className=" grid grid-cols-2 gap-3 my-3">
               {Array.from({ length: 8 }, (_, index) => index + 1).map(
                 (semester) => (
