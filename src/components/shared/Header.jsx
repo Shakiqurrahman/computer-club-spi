@@ -60,6 +60,10 @@ const Header = () => {
             onClick={handleClose}>
               <NavLink to="/contact">Contact</NavLink>
             </li>
+            <li className="hover:text-[#2030e0] duration-300"
+            onClick={handleClose}>
+              <NavLink to="/others/cgpa-calculator">Others</NavLink>
+            </li>
           </ul>
         </nav>
         <div

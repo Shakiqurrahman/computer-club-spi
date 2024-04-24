@@ -11,6 +11,7 @@ import DLayout from "./DLayout";
 import DEventPage from "../dashboard/DEventPage";
 import DNoticePage from "../dashboard/DNoticePage";
 import DTeachersPage from "../dashboard/DTeachersPage";
+import CgpaCalc from "../components/CgpaCalc";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
         element: <ResultPage />,
       },
       {
+        path: "/others/cgpa-calculator",
+        element: <CgpaCalc />,
+      },
+      {
         path: "/about",
         element: <AboutPage />,
       },
@@ -37,6 +42,10 @@ export const router = createBrowserRouter([
         path: "/contact",
         element: <ContactPage />,
       },
+      // {
+      //   path: "/Others",
+      //   element: <ContactPage />,
+      // },
     ],
   },
   {
