@@ -129,10 +129,6 @@ function CgpaCalc() {
         setResultData(data);
         setLoading(false);
 
-        if(resultData.passed=== false) {
-          setError('Result not found!!')
-        }
-
       } catch (error) {
         console.log(error);
         setError("Result Not Found!");
