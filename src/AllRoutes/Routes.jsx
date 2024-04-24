@@ -1,17 +1,20 @@
 import { createBrowserRouter } from "react-router-dom";
-import HomePage from "../Pages/HomePage";
-import ErrorPage from "../components/shared/ErrorPage";
-import Layout from "./layout";
 import AboutPage from "../Pages/AboutPage";
-import EventPage from "../Pages/EventPage";
 import ContactPage from "../Pages/ContactPage";
-import Dashboard from "../dashboard/Dashboard";
+import EventPage from "../Pages/EventPage";
+import HomePage from "../Pages/HomePage";
 import ResultPage from "../Pages/ResultPage";
-import DLayout from "./DLayout";
-import DEventPage from "../dashboard/DEventPage";
+import CgpaCalc from "../components/CgpaCalc";
+import DCreateEvent from "../components/dashboard-comp/DCreateEvent";
+import DCreateTeacher from "../components/dashboard-comp/DCreateTeacher";
+import DCreateNotice from "../components/dashboard-comp/DCreateNotice";
+import ErrorPage from "../components/shared/ErrorPage";
 import DNoticePage from "../dashboard/DNoticePage";
 import DTeachersPage from "../dashboard/DTeachersPage";
-import CgpaCalc from "../components/CgpaCalc";
+import DEventPage from "../dashboard/DEventPage";
+import Dashboard from "../dashboard/Dashboard";
+import DLayout from "./DLayout";
+import Layout from "./layout";
 
 export const router = createBrowserRouter([
   {
@@ -66,12 +69,25 @@ export const router = createBrowserRouter([
         element: <DEventPage />,
       },
       {
+        path: "/admin/dashboard/create-event",
+        element: <DCreateEvent />,
+      },
+      {
         path: "/admin/dashboard/notice",
         element: <DNoticePage />,
+      },
+      {
+        path: "/admin/dashboard/create-notice",
+        element: <DCreateNotice />,
       },
       {
         path: "/admin/dashboard/teachers",
         element: <DTeachersPage />,
       },
-]},
+      {
+        path: "/admin/dashboard/create-teacher",
+        element: <DCreateTeacher />,
+      },
+    ],
+  },
 ]);
