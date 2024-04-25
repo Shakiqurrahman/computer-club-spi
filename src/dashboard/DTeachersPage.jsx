@@ -1,29 +1,27 @@
-import React, { useState } from "react";
+/* eslint-disable no-undef */
 import { Link } from "react-router-dom";
 import DFooter from "../components/dashboard-comp/DFooter";
 import Sidebar from "../components/dashboard-comp/Sidebar";
+import { useGetData } from "../utility/fetchData/getData";
+import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 
 const DTeachersPage = () => {
-  const teachersData = [
-    {
-      id: 1,
-      avatar: "https://randomuser.me/api/portraits/men/1.jpg",
-      name: "John Doe",
-      profession: "Mathematics Teacher",
-      number: "+1234567890",
-    },
-    {
-      id: 2,
-      avatar: "https://randomuser.me/api/portraits/women/2.jpg",
-      name: "Jane Smith",
-      profession: "Science Teacher",
-      number: "+9876543210",
-    },
-  ];
+  const { datas, error, loading } = useGetData("teacher");
 
-  const [teachers, setTeachers] = useState(teachersData);
+  const onRemove = async (id) => {
+    const fetch = await axios.delete(
+      `https://computer-club-spi.onrender.com/api/teacher/delete/${id}`
+    );
+    const data = await fetch.data;
+    toast.success(data.message);
+    console.log(data.message);
+    window.location.reload();
+  };
+
   return (
     <div className="flex overflow-hidden bg-white pt-16">
+      <Toaster />
       <Sidebar />
       <div className="h-full w-full bg-white relative overflow-y-auto lg:ml-60 mt-6 sm:p-4">
         <div className="bg-white shadow rounded-lg p-4 xl:p-6">
@@ -36,12 +34,12 @@ const DTeachersPage = () => {
             </Link>
           </div>
           <input
-          type="text"
-          placeholder="Search by teacher's name"
-          className="py-2 px-4 text-sm outline-none border border-gray-300 rounded-md w-full mb-2"
-          // value={searchTerm}
-          // onChange={(e) => setSearchTerm(e.target.value)}
-        />
+            type="text"
+            placeholder="Search by teacher's name"
+            className="py-2 px-4 text-sm outline-none border border-gray-300 rounded-md w-full mb-2"
+            // value={searchTerm}
+            // onChange={(e) => setSearchTerm(e.target.value)}
+          />
           <div className="overflow-x-auto">
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
@@ -56,7 +54,7 @@ const DTeachersPage = () => {
                     scope="col"
                     className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                   >
-                    Teacher's Name
+                    {`Teacher's Name`}
                   </th>
                   <th
                     scope="col"
@@ -78,54 +76,60 @@ const DTeachersPage = () => {
                   </th>
                 </tr>
               </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
-                {teachers?.map((teacher) => (
-                  <tr key={teacher.id}>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center">
-                        <div className="flex-shrink-0 h-10 w-10">
-                          <img
-                            className="h-10 w-10 rounded-full"
-                            src={teacher.avatar}
-                            alt="Teacher Avatar"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-gray-900">
-                        {teacher.name}
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-gray-900">
-                        {teacher.profession}
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-gray-900">
-                        {teacher.number}
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                      <button
-                        className="text-indigo-600 hover:text-indigo-900"
-                        onClick={() => onEdit(teacher.id)}
-                      >
-                        Edit
-                      </button>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                      <button
-                        className="text-red-600 hover:text-red-900"
-                        onClick={() => onRemove(teacher.id)}
-                      >
-                        Remove
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
+              {!error ? (
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {datas &&
+                    datas.data?.map((teacher) => (
+                      <tr key={teacher.id}>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="flex items-center">
+                            <div className="flex-shrink-0 h-10 w-10">
+                              <img
+                                className="h-10 w-10 rounded-full"
+                                src={teacher.image}
+                                alt="Teacher Avatar"
+                              />
+                            </div>
+                          </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="text-sm text-gray-900">
+                            {teacher.name}
+                          </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="text-sm text-gray-900">
+                            {teacher.position}
+                          </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="text-sm text-gray-900">
+                            {teacher.phoneNumber}
+                          </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                          <Link
+                            className="text-indigo-600 hover:text-indigo-900"
+                            to={`/admin/dashboard/edit/${teacher.name}`}
+                          >
+                            Edit
+                          </Link>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                          <button
+                            className="text-red-600 hover:text-red-900"
+                            onClick={() => onRemove(teacher._id)}
+                          >
+                            Remove
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  {loading && <p>loading...</p>}
+                </tbody>
+              ) : (
+                <p className=" text-3xl mt-5">Error.. </p>
+              )}
             </table>
           </div>
         </div>

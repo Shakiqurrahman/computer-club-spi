@@ -8,13 +8,13 @@ import CgpaCalc from "../components/CgpaCalc";
 import DCreateEvent from "../components/dashboard-comp/DCreateEvent";
 import DCreateTeacher from "../components/dashboard-comp/DCreateTeacher";
 import DCreateNotice from "../components/dashboard-comp/DCreateNotice";
-import ErrorPage from "../components/shared/ErrorPage";
 import DNoticePage from "../dashboard/DNoticePage";
 import DTeachersPage from "../dashboard/DTeachersPage";
 import DEventPage from "../dashboard/DEventPage";
 import Dashboard from "../dashboard/Dashboard";
 import DLayout from "./DLayout";
 import Layout from "./layout";
+import TeacherEdit from "../components/dashboard-comp/TeacherEdit";
 
 export const router = createBrowserRouter([
   {
@@ -51,10 +51,6 @@ export const router = createBrowserRouter([
       // },
     ],
   },
-  {
-    path: "*",
-    element: <ErrorPage />,
-  },
 
   {
     path: "/admin/dashboard",
@@ -87,6 +83,10 @@ export const router = createBrowserRouter([
       {
         path: "/admin/dashboard/create-teacher",
         element: <DCreateTeacher />,
+      },
+      {
+        path: "/admin/dashboard/edit/:name",
+        element: <TeacherEdit />,
       },
     ],
   },
