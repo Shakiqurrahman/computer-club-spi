@@ -110,7 +110,7 @@ const DTeachersPage = () => {
                         <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                           <Link
                             className="text-indigo-600 hover:text-indigo-900"
-                            to={`/admin/dashboard/edit/${teacher.name}`}
+                            to={`/admin/dashboard/teacher/edit/${teacher.name}`}
                           >
                             Edit
                           </Link>

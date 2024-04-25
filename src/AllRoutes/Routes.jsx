@@ -15,6 +15,7 @@ import Dashboard from "../dashboard/Dashboard";
 import DLayout from "./DLayout";
 import Layout from "./layout";
 import TeacherEdit from "../components/dashboard-comp/TeacherEdit";
+import NoticeEdit from "../components/dashboard-comp/NoticEdit";
 
 export const router = createBrowserRouter([
   {
@@ -85,8 +86,12 @@ export const router = createBrowserRouter([
         element: <DCreateTeacher />,
       },
       {
-        path: "/admin/dashboard/edit/:name",
+        path: "/admin/dashboard/teacher/edit/:name",
         element: <TeacherEdit />,
+      },
+      {
+        path: "/admin/dashboard/notic/edit/:id",
+        element: <NoticeEdit />,
       },
     ],
   },
