@@ -1,27 +1,40 @@
 import Sidebar from "../../components/dashboard-comp/Sidebar";
 import DFooter from "../../components/dashboard-comp/DFooter";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ImageUploader from "../ImageUploadBB";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { useParams } from "react-router-dom";
+import { basepath } from "../../utility/config/basepath";
 
 const DCreateEvent = () => {
+  const { id } = useParams();
   const [loading, setLoading] = useState(false);
+  const [eventId, setEventId] = useState();
   const [form, setForm] = useState({
     thumbnail: "",
-    detail: "",
+    details: "",
     date: "",
     description: "",
     event_name: "",
     time: "",
   });
 
-  const handleImageUpload = (imageUrl) => {
-    setForm({
-      ...form,
-      thumbnail: imageUrl,
-    });
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const fetchPath = `${basepath}/event/one/${id}`;
+        const response = await axios.patch(fetchPath);
+        const { data } = await response.data;
+        setEventId(data._id);
+        setForm(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const handleChange = (name, value) => {
     setForm((prevForm) => ({
@@ -30,29 +43,32 @@ const DCreateEvent = () => {
     }));
   };
 
-  const fetchPath = `https://computer-club-spi.onrender.com/api/event/create`;
+  const handleImageUpload = (imageUrl) => {
+    setForm({
+      ...form,
+      thumbnail: imageUrl,
+    });
+  };
+
+  const fetchPath = `https://computer-club-spi.onrender.com/api/event/update/${eventId}`;
+
   const handleEventForm = async (e) => {
-    console.log("Create an Event!!");
     e.preventDefault();
     setLoading(true);
 
     try {
-      const data = await axios.post(fetchPath, form);
-
+      const data = await axios.put(fetchPath, form);
+      console.log(data, "datas");
       const res = await data.data;
       if (res) {
-        console.log(res);
-        toast.success(res.message);
-        window.location.replace("/admin/dashboard/events");
+        toast.success("Data Update");
+        window.location.replace("/admin/dashboard/event");
       }
 
       setForm({
-        thumbnail: "",
-        detail: "",
+        notic_name: "",
+        details: "",
         date: "",
-        description: "",
-        event_name: "",
-        time: "",
       });
     } catch (error) {
       console.log(error);
@@ -62,7 +78,6 @@ const DCreateEvent = () => {
       setLoading(false);
     }
   };
-
   return (
     <div className="flex overflow-hidden bg-white pt-16">
       <Sidebar />
@@ -99,30 +114,13 @@ const DCreateEvent = () => {
               />
               <ImageUploader onImageUpload={handleImageUpload} />
 
-              <div className="transition-all duration-500">
-                {form.thumbnail && (
-                  <img
-                    src={form.thumbnail}
-                    className="  size-44 object-cover mx-3 my-3 rounded-full shadow-md"
-                    alt=""
-                  />
-                )}
-              </div>
               <textarea
                 className="focus:outline-none p-3 rounded-md resize-none"
                 cols="20"
                 rows="8"
                 placeholder="Event Detail"
-                value={form.detail}
-                onChange={(e) => handleChange("detail", e.target.value)}
-              ></textarea>
-              <textarea
-                className="focus:outline-none p-3 rounded-md resize-none"
-                cols="20"
-                rows="8"
-                placeholder="Event description "
-                value={form.description}
-                onChange={(e) => handleChange("description", e.target.value)}
+                value={form.details}
+                onChange={(e) => handleChange("details", e.target.value)}
               ></textarea>
 
               <button

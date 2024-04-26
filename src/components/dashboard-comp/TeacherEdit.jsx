@@ -70,9 +70,7 @@ const TeacherEdit = () => {
       const res = await data.data;
       if (res) {
         toast.success("Data Update");
-        window.location.replace(
-          "http://localhost:5173/admin/dashboard/teachers"
-        );
+        window.location.replace("/admin/dashboard/teachers");
       }
 
       setForm({

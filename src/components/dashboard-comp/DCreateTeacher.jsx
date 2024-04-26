@@ -7,8 +7,6 @@ import ImageUploader from "../ImageUploadBB";
 import axios from "axios";
 
 const DCreateTeacher = () => {
-   
-
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     name: "",
@@ -47,7 +45,7 @@ const DCreateTeacher = () => {
       const res = await data.data;
       if (res) {
         toast.success("Data created");
-        window.location.replace("/http://localhost:5173/admin/dashboard/teachers");
+        window.location.replace("/admin/dashboard/teachers");
       }
 
       setForm({

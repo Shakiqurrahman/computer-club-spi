@@ -16,6 +16,7 @@ import DLayout from "./DLayout";
 import Layout from "./layout";
 import TeacherEdit from "../components/dashboard-comp/TeacherEdit";
 import NoticeEdit from "../components/dashboard-comp/NoticEdit";
+import EventEdit from "../components/dashboard-comp/eventEdit";
 
 export const router = createBrowserRouter([
   {
@@ -92,6 +93,10 @@ export const router = createBrowserRouter([
       {
         path: "/admin/dashboard/notic/edit/:id",
         element: <NoticeEdit />,
+      },
+      {
+        path: "/admin/dashboard/event/edit/:id",
+        element: <EventEdit />,
       },
     ],
   },
