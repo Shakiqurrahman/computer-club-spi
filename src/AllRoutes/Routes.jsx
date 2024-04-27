@@ -22,6 +22,7 @@ import Layout from "./layout";
 import SignUp from "../components/users/signUp";
 import SignIn from "../components/users/singIn";
 import NoticePage from "../Pages/NoticePage";
+import Techers from "../components/techers";
 
 export const router = createBrowserRouter([
   {
@@ -63,6 +64,10 @@ export const router = createBrowserRouter([
       {
         path: "/Others/booklists/:id",
         element: <SingleBookList />,
+      },
+      {
+        path: "/techers",
+        element: <Techers />,
       },
     ],
   },

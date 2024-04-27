@@ -1,4 +1,3 @@
-import React from "react";
 import { FaHome } from "react-icons/fa";
 import { MdNavigateNext } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -31,6 +30,11 @@ const AboutPage = () => {
           <Principal />
         </div>
         <CheifInstructors />
+        <div className=" mt-10   text-xl text-center">
+          <Link to={'/techers'} className=" border-b-2 px-4 py-2 rounded-md  shadow-2xl bg-white/50">
+            About More Techer
+          </Link>
+        </div>
       </div>
 
       <div className="my-16 sm:my-32">
