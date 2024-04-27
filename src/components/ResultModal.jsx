@@ -8,7 +8,7 @@ const ResultModal = ({ rollNumber, resultData, toggle, setResultData }) => {
   
   let failSubjects;
   if (!resultData?.passed) {
-    failSubjects = resultData?.result.map((item) => item.replace("(T)", ""));
+    failSubjects = resultData?.result.map((item) => item.replace("(T)", " (Theory)"));
   }
 
   const [numOfSubF, setNumOfSubF] = useState(0);
@@ -20,17 +20,6 @@ const ResultModal = ({ rollNumber, resultData, toggle, setResultData }) => {
     }
   }, [resultData?.passed, resultData?.result.length]);
 
-  try {
-    if (typeof resultData?.result === "object") {
-      console.log("It's an object");
-    } else if (Array.isArray(resultData?.result)) {
-      console.log("It's an array");
-    } else {
-      console.log("It's neither an object nor an array");
-    }
-  } catch (error) {
-    console.log(error);
-  }
 
   let semesterSuffix;
   switch (resultData?.semester) {

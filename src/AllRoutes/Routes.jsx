@@ -4,21 +4,24 @@ import ContactPage from "../Pages/ContactPage";
 import EventPage from "../Pages/EventPage";
 import HomePage from "../Pages/HomePage";
 import ResultPage from "../Pages/ResultPage";
+import AllBookList from "../components/AllBookList";
 import CgpaCalc from "../components/CgpaCalc";
+import SingleBookList from "../components/SingleBookList";
 import DCreateEvent from "../components/dashboard-comp/DCreateEvent";
-import DCreateTeacher from "../components/dashboard-comp/DCreateTeacher";
 import DCreateNotice from "../components/dashboard-comp/DCreateNotice";
+import DCreateTeacher from "../components/dashboard-comp/DCreateTeacher";
+import NoticeEdit from "../components/dashboard-comp/NoticEdit";
+import TeacherEdit from "../components/dashboard-comp/TeacherEdit";
+import EventEdit from "../components/dashboard-comp/eventEdit";
+import DEventPage from "../dashboard/DEventPage";
 import DNoticePage from "../dashboard/DNoticePage";
 import DTeachersPage from "../dashboard/DTeachersPage";
-import DEventPage from "../dashboard/DEventPage";
 import Dashboard from "../dashboard/Dashboard";
 import DLayout from "./DLayout";
 import Layout from "./layout";
-import TeacherEdit from "../components/dashboard-comp/TeacherEdit";
-import NoticeEdit from "../components/dashboard-comp/NoticEdit";
-import EventEdit from "../components/dashboard-comp/eventEdit";
 import SignUp from "../components/users/signUp";
 import SignIn from "../components/users/singIn";
+import NoticePage from "../Pages/NoticePage";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +35,10 @@ export const router = createBrowserRouter([
       {
         path: "/events",
         element: <EventPage />,
+      },
+      {
+        path: "/notice",
+        element: <NoticePage />,
       },
       {
         path: "/results",
@@ -49,10 +56,14 @@ export const router = createBrowserRouter([
         path: "/contact",
         element: <ContactPage />,
       },
-      // {
-      //   path: "/Others",
-      //   element: <ContactPage />,
-      // },
+      {
+        path: "/Others/booklists",
+        element: <AllBookList />,
+      },
+      {
+        path: "/Others/booklists/:id",
+        element: <SingleBookList />,
+      },
     ],
   },
   {
