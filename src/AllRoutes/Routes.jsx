@@ -10,13 +10,15 @@ import DCreateEvent from "../components/dashboard-comp/DCreateEvent";
 import DCreateNotice from "../components/dashboard-comp/DCreateNotice";
 import DCreateTeacher from "../components/dashboard-comp/DCreateTeacher";
 import SingleBookList from "../components/dashboard-comp/SingleBookList";
-import ErrorPage from "../components/shared/ErrorPage";
 import DEventPage from "../dashboard/DEventPage";
 import DNoticePage from "../dashboard/DNoticePage";
 import DTeachersPage from "../dashboard/DTeachersPage";
 import Dashboard from "../dashboard/Dashboard";
 import DLayout from "./DLayout";
 import Layout from "./layout";
+import TeacherEdit from "../components/dashboard-comp/TeacherEdit";
+import NoticeEdit from "../components/dashboard-comp/NoticEdit";
+import EventEdit from "../components/dashboard-comp/eventEdit";
 
 export const router = createBrowserRouter([
   {
@@ -47,14 +49,10 @@ export const router = createBrowserRouter([
         path: "/contact",
         element: <ContactPage />,
       },
-      {
-        path: "/Others/booklists",
-        element: <AllBookList />,
-      },
-      {
-        path: "/Others/booklists/:id",
-        element: <SingleBookList />,
-      },
+      // {
+      //   path: "/Others",
+      //   element: <ContactPage />,
+      // },
     ],
   },
   {
@@ -93,6 +91,18 @@ export const router = createBrowserRouter([
       {
         path: "/admin/dashboard/create-teacher",
         element: <DCreateTeacher />,
+      },
+      {
+        path: "/admin/dashboard/teacher/edit/:name",
+        element: <TeacherEdit />,
+      },
+      {
+        path: "/admin/dashboard/notic/edit/:id",
+        element: <NoticeEdit />,
+      },
+      {
+        path: "/admin/dashboard/event/edit/:id",
+        element: <EventEdit />,
       },
     ],
   },

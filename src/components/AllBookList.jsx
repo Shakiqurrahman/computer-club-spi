@@ -1,5 +1,5 @@
 import React from "react";
-import booklistData from "../../utility/booklist.json";
+import booklistData from "../utility/booklist.json";
 import BookListRegulation from "./BookListRegulation";
 
 const AllBookList = () => {

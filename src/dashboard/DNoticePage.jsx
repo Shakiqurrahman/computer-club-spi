@@ -1,31 +1,27 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import DFooter from "../components/dashboard-comp/DFooter";
 import Sidebar from "../components/dashboard-comp/Sidebar";
-
+import { useGetData } from "../utility/fetchData/getData";
+import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 const DNoticePage = () => {
-  const NoticeData = [
-    {
-      id: 1,
-      image: "https://via.placeholder.com/150",
-      name: "International Mother Language Day",
-      date: "2024-05-01",
-      time: "4:20p.m",
-      status: "Upcoming",
-    },
-    {
-      id: 2,
-      image: "https://via.placeholder.com/150",
-      name: "Pohela Boishakh",
-      date: "2024-05-10",
-      time: "2:46p.m",
-      status: "Finished",
-    },
-  ];
+  const { datas, loading } = useGetData("notic");
 
-  const [notice, setNotice] = useState(NoticeData);
+  const onRemove = async (id) => {
+    toast.loading("loading...");
+
+    const fetch = await axios.delete(
+      `https://computer-club-spi.onrender.com/api/notic/delete/${id}`
+    );
+    const data = await fetch.data;
+    toast.success(data.message);
+    console.log(data.message);
+    window.location.reload();
+  };
+
   return (
     <div className="flex overflow-hidden bg-white pt-16">
+      <Toaster position="top-center" />
       <Sidebar />
       <div className="h-full w-full bg-white relative overflow-y-auto lg:ml-60 mt-6 sm:p-4">
         <div className="bg-white shadow rounded-lg p-4 xl:p-6">
@@ -64,7 +60,7 @@ const DNoticePage = () => {
                     scope="col"
                     className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                   >
-                    Notice Time
+                    Notice Dec
                   </th>
                   <th
                     scope="col"
@@ -81,24 +77,25 @@ const DNoticePage = () => {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                {notice?.map((notice) => (
-                  <tr key={notice.id}>
-                    <td className="px-6 py-4">
-                      <div className="text-sm font-medium text-gray-900 w-32 sm:w-64">
-                        {notice?.name}
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-gray-900">
-                        {notice?.date}
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-gray-900">
-                        {notice?.time}
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
+                {datas &&
+                  datas.data?.map((notice) => (
+                    <tr key={notice.id}>
+                      <td className="px-6 py-4">
+                        <div className="text-sm font-medium text-gray-900 min-w-max">
+                          {notice?.notic_name}
+                        </div>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <div className="text-sm text-gray-900">
+                          {notice?.date}
+                        </div>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <div className="text-sm text-gray-900 line-clamp-1 max-w-md">
+                          {notice?.details}
+                        </div>
+                      </td>
+                      {/* <td className="px-6 py-4 whitespace-nowrap">
                       {notice.status === "Finished" ||
                       notice.status === "finished" ? (
                         <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800 capitalize">
@@ -109,25 +106,27 @@ const DNoticePage = () => {
                           {notice?.status}
                         </span>
                       )}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                      <button
-                        className="text-indigo-600 hover:text-indigo-900"
-                        onClick={() => onEdit(notice.id)}
-                      >
-                        Edit
-                      </button>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                      <button
-                        className="text-red-600 hover:text-red-900"
-                        onClick={() => onRemove(notice.id)}
-                      >
-                        Remove
-                      </button>
-                    </td>
-                  </tr>
-                ))}
+                    </td> */}
+                      <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                        <Link
+                          className="text-indigo-600 hover:text-indigo-900"
+                          to={`/admin/dashboard/notic/edit/${notice.notic_name}`}
+                        >
+                          Edit
+                        </Link>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                        <button
+                          disabled={loading}
+                          className="text-red-600 disabled:text-red-400 hover:text-red-900"
+                          onClick={() => onRemove(notice._id)}
+                        >
+                          Remove
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                {loading && <p>loading....</p>}
               </tbody>
             </table>
           </div>

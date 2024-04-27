@@ -1,25 +1,68 @@
-import  { useState } from "react";
 import Sidebar from "../../components/dashboard-comp/Sidebar";
 import DFooter from "../../components/dashboard-comp/DFooter";
+import { useState } from "react";
+import ImageUploader from "../ImageUploadBB";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const DCreateEvent = () => {
-    const [details, setDetails] = useState([{ id: 1, value: '' }]);
+  const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState({
+    thumbnail: "",
+    detail: "",
+    date: "",
+    description: "",
+    event_name: "",
+    time: "",
+  });
 
-    const handleAddDetail = () => {
-      const newId = details[details.length - 1].id + 1;
-      setDetails([...details, { id: newId, value: '' }]);
-    };
-  
-    const handleChange = (id, e) => {
-      const updatedDetails = details.map(detail =>
-        detail.id === id ? { ...detail, value: e.target.value } : detail
-      );
-      setDetails(updatedDetails);
-    };
-
-  const handleEventForm = (e) => {
-    e.preventDefault();
+  const handleImageUpload = (imageUrl) => {
+    setForm({
+      ...form,
+      thumbnail: imageUrl,
+    });
   };
+
+  const handleChange = (name, value) => {
+    setForm((prevForm) => ({
+      ...prevForm,
+      [name]: value,
+    }));
+  };
+
+  const fetchPath = `https://computer-club-spi.onrender.com/api/event/create`;
+  const handleEventForm = async (e) => {
+    console.log("Create an Event!!");
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const data = await axios.post(fetchPath, form);
+
+      const res = await data.data;
+      if (res) {
+        console.log(res);
+        toast.success(res.message);
+        window.location.replace("/admin/dashboard/events");
+      }
+
+      setForm({
+        thumbnail: "",
+        detail: "",
+        date: "",
+        description: "",
+        event_name: "",
+        time: "",
+      });
+    } catch (error) {
+      console.log(error);
+      // setError(error.message);
+      toast.error(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="flex overflow-hidden bg-white pt-16">
       <Sidebar />
@@ -34,47 +77,65 @@ const DCreateEvent = () => {
                 className="focus:outline-none p-3 rounded-md"
                 type="text"
                 placeholder="Event Name"
+                value={form.event_name}
+                onChange={(e) => handleChange("event_name", e.target.value)}
                 required
               />
               <input
                 className="focus:outline-none p-3 rounded-md"
                 type="text"
                 placeholder="Event Date"
+                value={form.date}
+                onChange={(e) => handleChange("date", e.target.value)}
                 required
               />
+
               <input
                 className="focus:outline-none p-3 rounded-md"
                 type="text"
                 placeholder="Event Time"
+                value={form.time}
+                onChange={(e) => handleChange("time", e.target.value)}
               />
-              <input
-                className="bg-white focus:outline-none p-3 rounded-md"
-                type="file"
-              />
-              <div
-        className="px-4 py-2 bg-blue-500/50 text-black rounded-lg inline w-44 font-semibold text-sm cursor-pointer"
-        onClick={handleAddDetail}
-      >
-        Add Another Detail
-      </div>
-      {details.map(detail => (
-        <textarea
-          key={detail.id}
-          className="focus:outline-none p-3 rounded-md resize-none"
-          name={`detail-${detail.id}`}
-          id={`detail-${detail.id}`}
-          cols="20"
-          rows="8"
-          value={detail.value}
-          placeholder="Event Detail"
-          onChange={e => handleChange(detail.id, e)}
-        ></textarea>
-      ))}
-      <button className="px-4 py-3 bg-secondary text-white rounded-lg hover:bg-white hover:text-secondary duration-300 font-semibold" type="submit">Create Event</button>
+              <ImageUploader onImageUpload={handleImageUpload} />
+
+              <div className="transition-all duration-500">
+                {form.thumbnail && (
+                  <img
+                    src={form.thumbnail}
+                    className="  size-44 object-cover mx-3 my-3 rounded-full shadow-md"
+                    alt=""
+                  />
+                )}
+              </div>
+              <textarea
+                className="focus:outline-none p-3 rounded-md resize-none"
+                cols="20"
+                rows="8"
+                placeholder="Event Detail"
+                value={form.detail}
+                onChange={(e) => handleChange("detail", e.target.value)}
+              ></textarea>
+              <textarea
+                className="focus:outline-none p-3 rounded-md resize-none"
+                cols="20"
+                rows="8"
+                placeholder="Event description "
+                value={form.description}
+                onChange={(e) => handleChange("description", e.target.value)}
+              ></textarea>
+
+              <button
+                className="px-4 py-3 bg-secondary text-white rounded-lg hover:bg-white hover:text-secondary duration-300 font-semibold"
+                type="submit"
+                disabled={loading}
+              >
+                {loading ? <p>loading...</p> : "Create an Event"}
+              </button>
             </div>
           </form>
         </div>
-      <DFooter />
+        <DFooter />
       </div>
     </div>
   );

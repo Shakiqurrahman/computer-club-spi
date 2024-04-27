@@ -1,12 +1,19 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import toast, { Toaster } from "react-hot-toast";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DFooter from "./DFooter";
 import Sidebar from "./Sidebar";
 import ImageUploader from "../ImageUploadBB";
 import axios from "axios";
+import { useParams } from "react-router-dom";
+import { basepath } from "../../utility/config/basepath";
 
-const DCreateTeacher = () => {
+const TeacherEdit = () => {
+  // Get the URL parameters
+  const { name } = useParams();
+
+  const [id, setId] = useState(null);
+
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     name: "",
@@ -21,6 +28,23 @@ const DCreateTeacher = () => {
     position: "",
   });
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const fetchPath = `${basepath}/teacher/one/${name}`;
+        const response = await axios.patch(fetchPath);
+        const { data } = await response.data;
+        setId(data._id);
+        setForm(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  // console.log(form,  "form data");
   const handleChange = (name, value) => {
     setForm((prevForm) => ({
       ...prevForm,
@@ -35,16 +59,17 @@ const DCreateTeacher = () => {
     });
   };
 
-  const fetchPath = `https://computer-club-spi.onrender.com/api/teacher/create`;
+  const fetchPath = `https://computer-club-spi.onrender.com/api/teacher/update/${id}`;
   const handleNoticeForm = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      const data = await axios.post(fetchPath, form);
+      const data = await axios.put(fetchPath, form);
+      console.log(data, "datas");
       const res = await data.data;
       if (res) {
-        toast.success("Data created");
+        toast.success("Data Update");
         window.location.replace("/admin/dashboard/teachers");
       }
 
@@ -76,7 +101,7 @@ const DCreateTeacher = () => {
       <div className="h-full w-full bg-white relative overflow-y-auto lg:ml-60 mt-6 sm:p-4">
         <div className="bg-blue-100 rounded-xl p-4 xl:p-6 max-w-[800px] mx-auto">
           <h1 className="text-3xl text-center font-semibold mb-6 text-secondary">
-            Create a Teacher Bio!!
+            Edit Teacher Bio!
           </h1>
           <form onSubmit={handleNoticeForm}>
             <div className="flex flex-col gap-2">
@@ -173,4 +198,4 @@ const DCreateTeacher = () => {
   );
 };
 
-export default DCreateTeacher;
+export default TeacherEdit;

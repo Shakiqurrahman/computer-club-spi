@@ -1,18 +1,40 @@
 import Sidebar from "../../components/dashboard-comp/Sidebar";
 import DFooter from "../../components/dashboard-comp/DFooter";
-import { useState } from "react";
-import toast from "react-hot-toast";
+import { useEffect, useState } from "react";
+import ImageUploader from "../ImageUploadBB";
 import axios from "axios";
+import toast from "react-hot-toast";
+import { useParams } from "react-router-dom";
+import { basepath } from "../../utility/config/basepath";
 
-const DCreateNotice = () => {
+const DCreateEvent = () => {
+  const { id } = useParams();
   const [loading, setLoading] = useState(false);
+  const [eventId, setEventId] = useState();
   const [form, setForm] = useState({
-    notic_name: "",
+    thumbnail: "",
     details: "",
     date: "",
+    description: "",
+    event_name: "",
+    time: "",
   });
 
-  console.log(form);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const fetchPath = `${basepath}/event/one/${id}`;
+        const response = await axios.patch(fetchPath);
+        const { data } = await response.data;
+        setEventId(data._id);
+        setForm(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const handleChange = (name, value) => {
     setForm((prevForm) => ({
@@ -21,17 +43,26 @@ const DCreateNotice = () => {
     }));
   };
 
-  const fetchPath = `https://computer-club-spi.onrender.com/api/notic/create`;
-  const handleNoticeForm = async (e) => {
+  const handleImageUpload = (imageUrl) => {
+    setForm({
+      ...form,
+      thumbnail: imageUrl,
+    });
+  };
+
+  const fetchPath = `https://computer-club-spi.onrender.com/api/event/update/${eventId}`;
+
+  const handleEventForm = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      const data = await axios.post(fetchPath, form);
+      const data = await axios.put(fetchPath, form);
+      console.log(data, "datas");
       const res = await data.data;
       if (res) {
-        toast.success("Data created");
-        window.location.replace("/admin/dashboard/notice");
+        toast.success("Data Update");
+        window.location.replace("/admin/dashboard/event");
       }
 
       setForm({
@@ -47,53 +78,57 @@ const DCreateNotice = () => {
       setLoading(false);
     }
   };
-
   return (
     <div className="flex overflow-hidden bg-white pt-16">
       <Sidebar />
       <div className="h-full w-full bg-white relative overflow-y-auto lg:ml-60 mt-6 sm:p-4">
         <div className="bg-blue-100 rounded-xl p-4 xl:p-6 max-w-[800px] mx-auto">
           <h1 className="text-3xl text-center font-semibold mb-6 text-secondary">
-            Create a Notice!!
+            Create an Event!!
           </h1>
-          <form onSubmit={handleNoticeForm}>
+          <form onSubmit={handleEventForm}>
             <div className="flex flex-col gap-2">
               <input
                 className="focus:outline-none p-3 rounded-md"
                 type="text"
-                placeholder="Notice Name"
+                placeholder="Event Name"
+                value={form.event_name}
+                onChange={(e) => handleChange("event_name", e.target.value)}
                 required
-                value={form.notic_name}
-                onChange={(e) => handleChange("notic_name", e.target.value)}
               />
               <input
                 className="focus:outline-none p-3 rounded-md"
-                type="date"
-                placeholder="day/month/year"
-                required
+                type="text"
+                placeholder="Event Date"
                 value={form.date}
                 onChange={(e) => handleChange("date", e.target.value)}
+                required
               />
-              {/* <input
+
+              <input
                 className="focus:outline-none p-3 rounded-md"
                 type="text"
-                placeholder="Notice Time"
-              /> */}
+                placeholder="Event Time"
+                value={form.time}
+                onChange={(e) => handleChange("time", e.target.value)}
+              />
+              <ImageUploader onImageUpload={handleImageUpload} />
 
               <textarea
                 className="focus:outline-none p-3 rounded-md resize-none"
                 cols="20"
                 rows="8"
+                placeholder="Event Detail"
                 value={form.details}
                 onChange={(e) => handleChange("details", e.target.value)}
-                placeholder="Notice Detail"
               ></textarea>
 
               <button
-                className="px-4 py-3 bg-secondary text-white rounded-lg hover:bg-white border border-transparent hover:border-secondary hover:text-secondary duration-300 font-semibold"
+                className="px-4 py-3 bg-secondary text-white rounded-lg hover:bg-white hover:text-secondary duration-300 font-semibold"
                 type="submit"
+                disabled={loading}
               >
-                {loading ? "Createing...." : `Create Notice`}
+                {loading ? <p>loading...</p> : "Create an Event"}
               </button>
             </div>
           </form>
@@ -104,4 +139,4 @@ const DCreateNotice = () => {
   );
 };
 
-export default DCreateNotice;
+export default DCreateEvent;
