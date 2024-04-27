@@ -20,6 +20,7 @@ import DTeachersPage from "../dashboard/DTeachersPage";
 import Dashboard from "../dashboard/Dashboard";
 import DLayout from "./DLayout";
 import Layout from "./layout";
+import NoticePage from "../Pages/NoticePage";
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
       {
         path: "/events",
         element: <EventPage />,
+      },
+      {
+        path: "/notice",
+        element: <NoticePage />,
       },
       {
         path: "/results",

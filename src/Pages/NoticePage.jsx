@@ -1,17 +1,17 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { MdNavigateNext } from "react-icons/md";
 import { Link } from "react-router-dom";
-import axios from "axios";
-import EventCard from "../components/EventCard";
+import NoticeCard from "../components/NoticeCard";
 
-const EventPage = () => {
-  const [events, setEvents] = useState([]);
-  const API = "https://computer-club-spi.onrender.com/api/event/get";
+const NoticePage = () => {
+  const [notice, setNotice] = useState([]);
+  const API = "https://computer-club-spi.onrender.com/api/notice/get";
   const getEvents = async (url) => {
     const res = await axios.get(url);
-    const eventsData = await res.data.data;
-    setEvents(eventsData);
+    const noticeData = await res.data.data;
+    setNotice(noticeData);
   };
   useEffect(() => {
     getEvents(API);
@@ -19,7 +19,7 @@ const EventPage = () => {
   return (
     <>
       <h1 className="text-center font-semibold text-3xl mb-1 text-secondary">
-        Events
+        Notice
       </h1>
       <h3 className="text-md font-normal flex justify-center items-center">
         <Link
@@ -30,16 +30,16 @@ const EventPage = () => {
           Home
         </Link>
         <MdNavigateNext size={22} />
-        <span className="text-[#2030e0]">Events</span>
+        <span className="text-[#2030e0]">Notice</span>
       </h3>
       <div className="mt-20 mb-32">
         <div className="container mx-auto">
           <h1 className="text-3xl font-semibold text-center my-8">
-            Upcoming Events
+            Upcoming Notice
           </h1>
           <div className="grid grid-cols-3 gap-8">
-            {events.map((event, index) => (
-              <EventCard key={index} event={event} />
+            {notice.map((notice, index) => (
+              <NoticeCard key={index} notice={notice} />
             ))}
           </div>
         </div>
@@ -48,4 +48,4 @@ const EventPage = () => {
   );
 };
 
-export default EventPage;
+export default NoticePage;
