@@ -5,13 +5,15 @@ import EventPage from "../Pages/EventPage";
 import HomePage from "../Pages/HomePage";
 import ResultPage from "../Pages/ResultPage";
 import CgpaCalc from "../components/CgpaCalc";
+import AllBookList from "../components/dashboard-comp/AllBookList";
 import DCreateEvent from "../components/dashboard-comp/DCreateEvent";
-import DCreateTeacher from "../components/dashboard-comp/DCreateTeacher";
 import DCreateNotice from "../components/dashboard-comp/DCreateNotice";
+import DCreateTeacher from "../components/dashboard-comp/DCreateTeacher";
+import SingleBookList from "../components/dashboard-comp/SingleBookList";
 import ErrorPage from "../components/shared/ErrorPage";
+import DEventPage from "../dashboard/DEventPage";
 import DNoticePage from "../dashboard/DNoticePage";
 import DTeachersPage from "../dashboard/DTeachersPage";
-import DEventPage from "../dashboard/DEventPage";
 import Dashboard from "../dashboard/Dashboard";
 import DLayout from "./DLayout";
 import Layout from "./layout";
@@ -45,10 +47,14 @@ export const router = createBrowserRouter([
         path: "/contact",
         element: <ContactPage />,
       },
-      // {
-      //   path: "/Others",
-      //   element: <ContactPage />,
-      // },
+      {
+        path: "/Others/booklists",
+        element: <AllBookList />,
+      },
+      {
+        path: "/Others/booklists/:id",
+        element: <SingleBookList />,
+      },
     ],
   },
   {

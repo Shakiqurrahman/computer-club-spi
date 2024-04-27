@@ -8,7 +8,7 @@ const ResultModal = ({ rollNumber, resultData, toggle, setResultData }) => {
   
   let failSubjects;
   if (!resultData?.passed) {
-    failSubjects = resultData?.result.map((item) => item.replace("(T)", ""));
+    failSubjects = resultData?.result.map((item) => item.replace("(T)", " (Theory)"));
   }
 
   const [numOfSubF, setNumOfSubF] = useState(0);

@@ -1,0 +1,899 @@
+{
+  "programs": [
+    {
+      "course": "Electrical Technology (667)",
+      "slug" : "Electrical-Technology-2016",
+      "regulation": "2016",
+      "description": "2016 Regulation Booklist",
+      "semesters": [
+        {
+          "semester": "1st Semester",
+          "courses": [
+            { "Code": "61011", "Name": "Engineering Drawing" },
+            {
+              "Code": "65812",
+              "Name": "Physical Education & Life Skill development"
+            },
+            { "Code": "65911", "Name": "Mathematics-1" },
+            { "Code": "65913", "Name": "Chemistry" },
+            { "Code": "66711", "Name": "Basic Electricity" },
+            { "Code": "66713", "Name": "Electrical Engineering Materials" },
+            { "Code": "66811", "Name": "Basic Electronics" }
+          ]
+        },
+        {
+          "semester": "2nd Semester",
+          "courses": [
+            { "Code": "66721", "Name": "Electrical Circuits -1" },
+            { "Code": "66722", "Name": "Electrical Appliances" },
+            { "Code": "66611", "Name": "Computer application" },
+            { "Code": "65921", "Name": "Mathematics-2" },
+            { "Code": "65912", "Name": "Physics-1" },
+            { "Code": "65711", "Name": "Bangla" },
+            { "Code": "65712", "Name": "English" }
+          ]
+        },
+        {
+          "semester": "3rd Semester",
+          "courses": [
+            { "Code": "66731", "Name": "Electrical Circuit -2" },
+            { "Code": "66732", "Name": "Advance Electricity" },
+            { "Code": "66733", "Name": "Electrical Engineering Drawing" },
+            { "Code": "65931", "Name": "Mathematics-3" },
+            { "Code": "65922", "Name": "Physics-2" },
+            { "Code": "65722", "Name": "Communicative English" },
+            { "Code": "65811", "Name": "Social science" }
+          ]
+        },
+        {
+          "semester": "4th Semester",
+          "courses": [
+            {
+              "Code": "66741",
+              "Name": "Electrical Installation Planning & Estimating"
+            },
+            { "Code": "66742", "Name": "DC Machines" },
+            { "Code": "66845", "Name": "Industrial Electronics" },
+            { "Code": "67045", "Name": "Applied Mechanics" },
+            { "Code": "66631", "Name": "Programming Essentials" },
+            { "Code": "65841", "Name": "Business Origination & Communication" }
+          ]
+        },
+        {
+          "semester": "5th Semester",
+          "courses": [
+            {
+              "Code": "66751",
+              "Name": "Electrical & Electronic Measurement -I"
+            },
+            { "Code": "66752", "Name": "Generation of Electrical Power" },
+            { "Code": "66753", "Name": "Renewable Energy" },
+            { "Code": "66856", "Name": "Digital Electronics & Microprocessor" },
+            { "Code": "69054", "Name": "Environmental Studies" },
+            { "Code": "65851", "Name": "Accounting Theory & Practice" }
+          ]
+        },
+        {
+          "semester": "6th Semester",
+          "courses": [
+            { "Code": "66761", "Name": "Alternating Current Machines-1" },
+            {
+              "Code": "66762",
+              "Name": "Electrical & Electronic Measurement-2"
+            },
+            {
+              "Code": "66763",
+              "Name": "Transmission and Distribution of Electrical Power-1"
+            },
+            { "Code": "66867", "Name": "Communication Engineering" },
+            { "Code": "66868", "Name": "Micro Controller & PLC" },
+            { "Code": "65852", "Name": "Industrial Management" }
+          ]
+        },
+        {
+          "semester": "7th Semester",
+          "courses": [
+            { "Code": "66771", "Name": "Alternating Current Machines-2" },
+            { "Code": "66772", "Name": "Electrical Engineering project" },
+            { "Code": "66773", "Name": "Switch Gear & Protection" },
+            {
+              "Code": "66774",
+              "Name": "Transmission and Distribution of Electrical Power-2"
+            },
+            {
+              "Code": "66775",
+              "Name": "Testing and Maintenance of Electrical Equipment"
+            },
+            { "Code": "66863", "Name": "Instrumentation & Process Control" },
+            { "Code": "65853", "Name": "Innovation & Entrepreneurship" }
+          ]
+        }
+      ]
+    },
+    {
+      "course": "Civil Technology (64)",
+      "slug" : "Civil-Technology-2022",
+      "regulation": "2022",
+      "description": "2022 Regulation Booklist",
+      "semesters": [
+        {
+          "semester": "1st Semester",
+          "courses": [
+            { "code": "21011", "name": "Engineering Drawing" },
+            { "code": "25711", "name": "Bangla-I" },
+            { "code": "25712", "name": "English-I" },
+            { "code": "25811", "name": "Social Science" },
+            { "code": "25911", "name": "Mathematics -I" },
+            { "code": "25913", "name": "Chemistry" },
+            { "code": "26411", "name": "Civil Engineering Materials" },
+            { "code": "26711", "name": "Basic Electricity" }
+          ]
+        },
+        {
+          "semester": "2nd Semester",
+          "courses": [
+            { "code": "25721", "name": "Bangla -II" },
+            { "code": "25722", "name": "English-II" },
+            {
+              "code": "25812",
+              "name": "Physical Education & Life Skills Development"
+            },
+            { "code": "25912", "name": "Physics -I" },
+            { "code": "25921", "name": "Mathematics-II" },
+            { "code": "26421", "name": "Civil Engineering Drawing" },
+            { "code": "26811", "name": "Basic Electronics" },
+            { "code": "27011", "name": "Basic Workshop Practice" }
+          ]
+        },
+        {
+          "semester": "3rd Semester",
+          "courses": [
+            { "code": "25831", "name": "Business Communication" },
+            { "code": "25922", "name": "Physics-II" },
+            { "code": "25931", "name": "Mathematics-III" },
+            { "code": "26431", "name": "Structural Mechanics" },
+            { "code": "26432", "name": "Surveying-I" },
+            { "code": "26433", "name": "Construction Process-I" },
+            { "code": "26611", "name": "Computer Office Application" }
+          ]
+        },
+        {
+          "semester": "4th Semester",
+          "courses": [
+            { "code": "25841", "name": "Accounting" },
+            { "code": "26441", "name": "Construction Process-II" },
+            { "code": "26442", "name": "Estimating & Costing-I" },
+            { "code": "26443", "name": "Civil CAD-I" },
+            { "code": "26444", "name": "Surveying-II" },
+            { "code": "26445", "name": "Geotechnical Engineering" },
+            { "code": "26446", "name": "Hydrology" },
+            { "code": "26521", "name": "Wood Workshop Practice" }
+          ]
+        },
+        {
+          "semester": "5th Semester",
+          "courses": [
+            { "code": "25852", "name": "Industrial Management" },
+            { "code": "26451", "name": "Foundation Engineering" },
+            { "code": "26452", "name": "Civil CAD-II" },
+            { "code": "26453", "name": "Surveying-III" },
+            { "code": "26454", "name": "Theory of Structure" },
+            { "code": "26455", "name": "Water Supply Engineering" },
+            { "code": "26456", "name": "Hydraulics" }
+          ]
+        },
+        {
+          "semester": "6th Semester",
+          "courses": [
+            { "code": "26461", "name": "Water Resources Engineering" },
+            { "code": "26462", "name": "Advance Surveying" },
+            { "code": "26463", "name": "Transportation Engineering-I" },
+            { "code": "26464", "name": "Design of Structure-I" },
+            { "code": "28863", "name": "Steel Structures" },
+            { "code": "28861", "name": "Advanced Construction" },
+            { "code": "29041", "name": "Environmental Studies" }
+          ]
+        },
+        {
+          "semester": "7th Semester",
+          "courses": [
+            { "code": "25851", "name": "Principles of Marketing" },
+            { "code": "25853", "name": "Innovation & Entrepreneurship" },
+            { "code": "26471", "name": "Civil Engineering Project" },
+            { "code": "26472", "name": "Sanitary Engineering" },
+            { "code": "26473", "name": "Transportation Engineering-II" },
+            { "code": "26474", "name": "Design of Structure-II" },
+            { "code": "26475", "name": "Estimating & Costing-II" },
+            {
+              "code": "28871",
+              "name": "Construction Management & Documentation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "course": "Computer Science & Technology (66)",
+      "slug" : "Computer-science-&-Technology-2022",
+      "regulation": "2022",
+      "description": "2022 Regulation Booklist",
+      "semesters": [
+        {
+          "semester": "1st Semester",
+          "courses": [
+            { "code": "21011", "name": "Engineering Drawing" },
+            { "code": "25711", "name": "Bangla-I" },
+            { "code": "25712", "name": "English-I" },
+            { "code": "25911", "name": "Mathematics -I" },
+            { "code": "25912", "name": "Physics -I" },
+            { "code": "26611", "name": "Computer Office Application" },
+            { "code": "26711", "name": "Basic Electricity" }
+          ]
+        },
+        {
+          "semester": "2nd Semester",
+          "courses": [
+            { "code": "25721", "name": "Bangla -II" },
+            { "code": "25722", "name": "English-II" },
+            {
+              "code": "25812",
+              "name": "Physical Education & Life Skills Development"
+            },
+            { "code": "25921", "name": "Mathematics-II" },
+            { "code": "25922", "name": "Physics-II" },
+            { "code": "26621", "name": "Python Programming" },
+            { "code": "26622", "name": "Computer Graphics Design-I" },
+            { "code": "26811", "name": "Basic Electronics" }
+          ]
+        },
+        {
+          "semester": "3rd Semester",
+          "courses": [
+            { "code": "25811", "name": "Social Science" },
+            { "code": "25913", "name": "Chemistry" },
+            { "code": "25931", "name": "Mathematics-III" },
+            { "code": "26631", "name": "Application Development Using Python" },
+            { "code": "26632", "name": "Computer Graphics Design-II" },
+            { "code": "26633", "name": "IT Support Services" },
+            { "code": "26831", "name": "Digital Electronics-I" }
+          ]
+        },
+        {
+          "semester": "4th Semester",
+          "courses": [
+            { "code": "25831", "name": "Business Communication" },
+            { "code": "26641", "name": "Java Programming" },
+            { "code": "26642", "name": "Data Structure & Algorithm" },
+            { "code": "26643", "name": "Computer Peripherals & Interfacing" },
+            { "code": "26644", "name": "Web Design & Development-I" },
+            { "code": "26841", "name": "Digital Electronics-II" },
+            { "code": "29041", "name": "Environmental Studies" }
+          ]
+        },
+        {
+          "semester": "5th Semester",
+          "courses": [
+            { "code": "25841", "name": "Accounting" },
+            { "code": "26651", "name": "Application Development Using Java" },
+            { "code": "26652", "name": "Web Design & Development-II" },
+            {
+              "code": "26653",
+              "name": "Computer Architecture & Microprocessor"
+            },
+            { "code": "26654", "name": "Data Communication" },
+            { "code": "26655", "name": "Operating System" },
+            { "code": "26656", "name": "Project Work-I" }
+          ]
+        },
+        {
+          "semester": "6th Semester",
+          "courses": [
+            { "code": "25851", "name": "Principles of Marketing" },
+            { "code": "25852", "name": "Industrial Management" },
+            { "code": "26661", "name": "Database Management System" },
+            { "code": "26662", "name": "Computer Networking" },
+            { "code": "26663", "name": "Sensor & IOT System" },
+            {
+              "code": "26664",
+              "name": "Microcontroller Based System Design & Development"
+            },
+            { "code": "26665", "name": "Surveillance Security System" },
+            { "code": "26666", "name": "Web Development Project" }
+          ]
+        },
+        {
+          "semester": "7th Semester",
+          "courses": [
+            { "code": "25853", "name": "Innovation & Entrepreneurship" },
+            { "code": "26671", "name": "Digital Marketing Technique" },
+            { "code": "26672", "name": "Network Administration & Services" },
+            { "code": "26673", "name": "Cyber Security & Ethics" },
+            { "code": "26674", "name": "Apps Development Project" },
+            { "code": "26675", "name": "Multimedia & Animation" },
+            { "code": "26676", "name": "Project Work-II" }
+          ]
+        }
+      ]
+    },
+    {
+      "course": "Power Technology (71)",
+      "slug" : "Power-Technology-2022",
+      "regulation": "2022",
+      "description": "2022 Regulation Booklist",
+      "semesters": [
+        {
+          "semester": "1st Semester",
+          "courses": [
+            { "code": "21011", "name": "Engineering Drawing" },
+            { "code": "25711", "name": "Bangla-I" },
+            { "code": "25712", "name": "English-I" },
+            { "code": "25811", "name": "Social Science" },
+            {
+              "code": "25812",
+              "name": "Physical Education & Life Skills Development"
+            },
+            { "code": "25911", "name": "Mathematics -I" },
+            { "code": "25912", "name": "Physics -I" },
+            { "code": "27111", "name": "Power Engineering Fundmental" }
+          ]
+        },
+        {
+          "semester": "2nd Semester",
+          "courses": [
+            { "code": "25721", "name": "Bangla -II" },
+            { "code": "25722", "name": "English-II" },
+            { "code": "25921", "name": "Mathematics-II" },
+            { "code": "25922", "name": "Physics-II" },
+            { "code": "26611", "name": "Computer Office Application" },
+            { "code": "26711", "name": "Basic Electricity" },
+            { "code": "27011", "name": "Basic Workshop Practice" },
+            { "code": "27121", "name": "Power Equipment Management & Safety" }
+          ]
+        },
+        {
+          "semester": "3rd Semester",
+          "courses": [
+            { "code": "25913", "name": "Chemistry" },
+            { "code": "25931", "name": "Mathematics-III" },
+            { "code": "26811", "name": "Basic Electronics" },
+            { "code": "27012", "name": "Machine Shop Practice I" },
+            { "code": "27131", "name": "Engineering Thermodynamics" },
+            { "code": "27231", "name": "RAC Cycles & Components" }
+          ]
+        },
+        {
+          "semester": "4th Semester",
+          "courses": [
+            { "code": "25841", "name": "Accounting" },
+            { "code": "26667", "name": "Progamming in C" },
+            { "code": "27041", "name": "Engineering Mechanics" },
+            { "code": "27043", "name": "Metallurgy" },
+            { "code": "27141", "name": "IC Engine Details" },
+            { "code": "27142", "name": "Fuels & Lubricants" },
+            { "code": "27143", "name": "Boiler Operation & Maintenance" }
+          ]
+        },
+        {
+          "semester": "5th Semester",
+          "courses": [
+            { "code": "25831", "name": "Business Communication" },
+            { "code": "25852", "name": "Industrial Management" },
+            { "code": "26241", "name": "Automotive Body Building" },
+            { "code": "27051", "name": "Fluid Mechanics & Machineries" },
+            { "code": "27053", "name": "Advanced Welding-I" },
+            {
+              "code": "27151",
+              "name": "Fundamental of Hybride & Electric Vehicle"
+            },
+            { "code": "27152", "name": "Power Plant Enginnering" }
+          ]
+        },
+        {
+          "semester": "6th Semester",
+          "courses": [
+            {
+              "code": "26764",
+              "name": "Transmission and Distribution of Electrical Power"
+            },
+            { "code": "27061", "name": "Strength of Materials" },
+            { "code": "27062", "name": "Mechanical Measurement & Metrology" },
+            { "code": "27065", "name": "Plant Engineering & Maintainance" },
+            {
+              "code": "27161",
+              "name": "Engine Overhauling, Inspection & Testing"
+            },
+            { "code": "29041", "name": "Environmental Studies" }
+          ]
+        },
+        {
+          "semester": "7th Semester",
+          "courses": [
+            { "code": "25851", "name": "Principles of Marketing" },
+            { "code": "25853", "name": "Innovation & Entrepreneurship" },
+            { "code": "27071", "name": "Design of Machine Elements" },
+            { "code": "27073", "name": "Heat Treatment of Metal" },
+            {
+              "code": "27171",
+              "name": "Service Station Operation & Estimating"
+            },
+            {
+              "code": "27172",
+              "name": "Automotive Electricity, Electronics & Comunication System"
+            },
+            { "code": "27173", "name": "Power Engineering Project" }
+          ]
+        }
+      ]
+    },
+    {
+      "course": "Mechanical Technology (70)",
+      "slug" : "Mechanical-Technology-2022",
+      "regulation": "2022",
+      "description": "2022 Regulation Booklist",
+      "semesters": [
+        {
+          "semester": "1st Semester",
+          "courses": [
+            {
+              "code": "21011",
+              "name": "Engineering Drawing"
+            },
+            {
+              "code": "25711",
+              "name": "Bangla-I"
+            },
+            {
+              "code": "25712",
+              "name": "English-I"
+            },
+            {
+              "code": "25812",
+              "name": "Physical Education & Life Skills Development"
+            },
+            {
+              "code": "25911",
+              "name": "Mathematics -I"
+            },
+            {
+              "code": "25912",
+              "name": "Physics -I"
+            },
+            {
+              "code": "27011",
+              "name": "Basic Workshop Practice"
+            },
+            {
+              "code": "27012",
+              "name": "Machine Shop Practice I"
+            }
+          ]
+        },
+        {
+          "semester": "2nd Semester",
+          "courses": [
+            {
+              "code": "25721",
+              "name": "Bangla -II"
+            },
+            {
+              "code": "25722",
+              "name": "English-II"
+            },
+            {
+              "code": "25921",
+              "name": "Mathematics-II"
+            },
+            {
+              "code": "25922",
+              "name": "Physics-II"
+            },
+            {
+              "code": "26711",
+              "name": "Basic Electricity"
+            },
+            {
+              "code": "27021",
+              "name": "Mechanical Engineering Drawing"
+            },
+            {
+              "code": "27022",
+              "name": "Mechanical Engineering Materials"
+            }
+          ]
+        },
+        {
+          "semester": "3rd Semester",
+          "courses": [
+            {
+              "code": "25811",
+              "name": "Social Science"
+            },
+            {
+              "code": "25831",
+              "name": "Business Communication"
+            },
+            {
+              "code": "25913",
+              "name": "Chemistry"
+            },
+            {
+              "code": "25931",
+              "name": "Mathematics-III"
+            },
+            {
+              "code": "26611",
+              "name": "Computer Office Application"
+            },
+            {
+              "code": "27031",
+              "name": "Machine Shop Practice II"
+            },
+            {
+              "code": "27231",
+              "name": "RAC Cycles & Components"
+            }
+          ]
+        },
+        {
+          "semester": "4th Semester",
+          "courses": [
+            {
+              "code": "25841",
+              "name": "Accounting"
+            },
+            {
+              "code": "26811",
+              "name": "Basic Electronics"
+            },
+            {
+              "code": "27041",
+              "name": "Engineering Mechanics"
+            },
+            {
+              "code": "27042",
+              "name": "Machine Shop Practice III"
+            },
+            {
+              "code": "27043",
+              "name": "Metallurgy"
+            },
+            {
+              "code": "27131",
+              "name": "Engineering Thermodynamics"
+            },
+            {
+              "code": "29041",
+              "name": "Environmental Studies"
+            }
+          ]
+        },
+        {
+          "semester": "5th Semester",
+          "courses": [
+            {
+              "code": "25852",
+              "name": "Industrial Management"
+            },
+            {
+              "code": "26667",
+              "name": "Programming  in C"
+            },
+            {
+              "code": "27051",
+              "name": "Fluid Mechanics & Machineries"
+            },
+            {
+              "code": "27052",
+              "name": "Mechanical Estimating & Costing"
+            },
+            {
+              "code": "27053",
+              "name": "Advanced Welding-I"
+            },
+            {
+              "code": "27054",
+              "name": "Foundry & Pattern Making"
+            },
+            {
+              "code": "27055",
+              "name": "Manufacturing Process"
+            }
+          ]
+        },
+        {
+          "semester": "6th Semester",
+          "courses": [
+            {
+              "code": "25851",
+              "name": "Principles of Marketing"
+            },
+            {
+              "code": "26211",
+              "name": "Automobile Fundamentals"
+            },
+            {
+              "code": "27061",
+              "name": "Strength of Materials"
+            },
+            {
+              "code": "27062",
+              "name": "Mechanical Measurement & Metrology"
+            },
+            {
+              "code": "27063",
+              "name": "CAD & CAM"
+            },
+            {
+              "code": "27064",
+              "name": "Advanced Welding-II"
+            },
+            {
+              "code": "27065",
+              "name": "Plant Engineering & Maintainance"
+            }
+          ]
+        },
+        {
+          "semester": "7th Semester",
+          "courses": [
+            {
+              "code": "25853",
+              "name": "Innovation & Entrepreneurship"
+            },
+            {
+              "code": "27071",
+              "name": "Design of Machine Elements"
+            },
+            {
+              "code": "27072",
+              "name": "Tool Design"
+            },
+            {
+              "code": "27073",
+              "name": "Heat Treatment of Metal"
+            },
+            {
+              "code": "27074",
+              "name": "Mechanical Engineering Project"
+            },
+            {
+              "code": "27075",
+              "name": "Production Planning & Control"
+            },
+            {
+              "code": "29231",
+              "name": "Mechatronics & PLC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "course": "Electronics Technology (68)",
+      "slug" : "Electronics-Technology-2022",
+      "regulation": "2022",
+      "description": "2022 Regulation Booklist",
+      "semesters": [
+        {
+          "semester": "1st Semester",
+          "courses": [
+            { "code": "21011", "name": "Engineering Drawing" },
+            { "code": "25711", "name": "Bangla-I" },
+            { "code": "25712", "name": "English-I" },
+            { "code": "25911", "name": "Mathematics -I" },
+            { "code": "25912", "name": "Physics -I" },
+            { "code": "26711", "name": "Basic Electricity" },
+            { "code": "26811", "name": "Basic Electronics" }
+          ]
+        },
+        {
+          "semester": "2nd Semester",
+          "courses": [
+            { "code": "25721", "name": "Bangla -II" },
+            { "code": "25722", "name": "English-II" },
+            { "code": "25811", "name": "Social Science" },
+            {
+              "code": "25812",
+              "name": "Physical Education & Life Skills Development"
+            },
+            { "code": "25921", "name": "Mathematics-II" },
+            { "code": "25922", "name": "Physics-II" },
+            { "code": "26721", "name": "Electrical Circuits-I" },
+            { "code": "26821", "name": "Electronic Devices and Circuits" }
+          ]
+        },
+        {
+          "semester": "3rd Semester",
+          "courses": [
+            { "code": "25913", "name": "Chemistry" },
+            { "code": "25931", "name": "Mathematics-III" },
+            { "code": "26611", "name": "Computer Office Application" },
+            { "code": "26731", "name": "Electrical Circuits-II" },
+            { "code": "26831", "name": "Digital Electronics-I" },
+            { "code": "26832", "name": "Power Electronics" }
+          ]
+        },
+        {
+          "semester": "4th Semester",
+          "courses": [
+            { "code": "25841", "name": "Accounting" },
+            {
+              "code": "26741",
+              "name": "Electrical Installation,Planning and Estimating"
+            },
+            { "code": "26742", "name": "DC Machine" },
+            { "code": "26841", "name": "Digital Electronics-II" },
+            { "code": "26842", "name": "Communication Engineering" },
+            {
+              "code": "26843",
+              "name": "Networks, Filters and Transmission lines"
+            },
+            { "code": "26844", "name": "Electronic servicing" }
+          ]
+        },
+        {
+          "semester": "5th Semester",
+          "courses": [
+            { "code": "25851", "name": "Principles of Marketing" },
+            { "code": "25852", "name": "Industrial Management" },
+            { "code": "26667", "name": "Progamming  in C" },
+            { "code": "26751", "name": "Generation of Electrical Power" },
+            {
+              "code": "26752",
+              "name": "Electrical & Electronic Measurements-I"
+            },
+            { "code": "26851", "name": "Television Engineering" },
+            { "code": "26852", "name": "Electronic Appliancs" },
+            { "code": "28654", "name": "Bio-Medical Instruments" }
+          ]
+        },
+        {
+          "semester": "6th Semester",
+          "courses": [
+            { "code": "26761", "name": "AC Machine-I" },
+            {
+              "code": "26762",
+              "name": "Transmission and Distribution of  Eectrical  Power-I"
+            },
+            {
+              "code": "26763",
+              "name": "Electrical & Electronic Measurements-II"
+            },
+            { "code": "26861", "name": "TV Studio and  Broadcastig" },
+            { "code": "26862", "name": "Microcontroller and Embedded System" },
+            { "code": "26863", "name": "PCB Design and Prototyping" },
+            { "code": "29041", "name": "Environmental Studies" }
+          ]
+        },
+        {
+          "semester": "7th Semester",
+          "courses": [
+            { "code": "25831", "name": "Business Communication" },
+            { "code": "25853", "name": "Innovation & Entrepreneurship" },
+            { "code": "26771", "name": "AC Machine-II" },
+            {
+              "code": "26772",
+              "name": "Transmission and Distribution of  Ellectrical Power-II"
+            },
+            { "code": "26871", "name": "Microwave  Radar and Navigation Aids" },
+            { "code": "26872", "name": "Industrial Automation and PLC" },
+            { "code": "26873", "name": "Control System and Robotics" },
+            { "code": "26874", "name": "Electronic Project" }
+          ]
+        }
+      ]
+    },
+    {
+      "course": "Electrical Technology (67)",
+      "slug" : "Electrical-Technology-2022",
+      "regulation": "2022",
+      "description": "2022 Regulation Booklist",
+      "semesters": [
+        {
+          "semester": "1st Semester",
+          "courses": [
+            { "code": "21011", "name": "Engineering Drawing" },
+            { "code": "25711", "name": "Bangla-I" },
+            { "code": "25712", "name": "English-I" },
+            {
+              "code": "25812",
+              "name": "Physical Education & Life Skills Development"
+            },
+            { "code": "25911", "name": "Mathematics -I" },
+            { "code": "25912", "name": "Physics -I" },
+            { "code": "26711", "name": "Basic Electricity" },
+            { "code": "26712", "name": "Electrical Engineering Materials" }
+          ]
+        },
+        {
+          "semester": "2nd Semester",
+          "courses": [
+            { "code": "25721", "name": "Bangla -II" },
+            { "code": "25722", "name": "English-II" },
+            { "code": "25921", "name": "Mathematics-II" },
+            { "code": "25922", "name": "Physics-II" },
+            { "code": "26721", "name": "Electrical Circuits-I" },
+            { "code": "26722", "name": "Electrical Engineering Drawing" },
+            { "code": "26811", "name": "Basic Electronics" }
+          ]
+        },
+        {
+          "semester": "3rd Semester",
+          "courses": [
+            { "code": "25931", "name": "Mathematics-III" },
+            { "code": "25913", "name": "Chemistry" },
+            { "code": "26611", "name": "Computer Office Application" },
+            { "code": "26731", "name": "Electrical Circuits-II" },
+            { "code": "26732", "name": "Electrical Appliances" },
+            { "code": "26833", "name": "Industrial Electronics" }
+          ]
+        },
+        {
+          "semester": "4th Semester",
+          "courses": [
+            { "code": "25811", "name": "Social Science" },
+            { "code": "25841", "name": "Accounting" },
+            {
+              "code": "26741",
+              "name": "Electrical Installation, Planning and Estimating"
+            },
+            { "code": "26742", "name": "DC Machine" },
+            { "code": "26743", "name": "Electrical Engineering Project-I" },
+            { "code": "26845", "name": "Digital Electronics" },
+            { "code": "27044", "name": "Applied Mechanics" }
+          ]
+        },
+        {
+          "semester": "5th Semester",
+          "courses": [
+            { "code": "25851", "name": "Principles of Marketing" },
+            { "code": "25852", "name": "Industrial Management" },
+            { "code": "26751", "name": "Generation of Electrical Power" },
+            {
+              "code": "26752",
+              "name": "Electrical & Electronic Measurements-I"
+            },
+            {
+              "code": "26753",
+              "name": "Testing and Maintenance of Electrical Equipments"
+            },
+            { "code": "26754", "name": "Electrical Engineering Project-II" },
+            { "code": "26853", "name": "Microprocessor & Microcontroller" }
+          ]
+        },
+        {
+          "semester": "6th Semester",
+          "courses": [
+            { "code": "26667", "name": "Programming in C" },
+            { "code": "26761", "name": "AC Machine-I" },
+            {
+              "code": "26762",
+              "name": "Transmission and Distribution of Electrical Power-I"
+            },
+            {
+              "code": "26763",
+              "name": "Electrical & Electronic Measurements-II"
+            },
+            { "code": "26842", "name": "Communication Engineering" },
+            { "code": "29041", "name": "Environmental Studies" }
+          ]
+        },
+        {
+          "semester": "7th Semester",
+          "courses": [
+            { "code": "25831", "name": "Business Communication" },
+            { "code": "25853", "name": "Innovation & Entrepreneurship" },
+            { "code": "26771", "name": "AC Machine-II" },
+            {
+              "code": "26772",
+              "name": "Transmission and Distribution of Electrical Power-II"
+            },
+            { "code": "26773", "name": "Switch Gear and Protection" },
+            { "code": "26774", "name": "Electrical Engineering Project-III" },
+            { "code": "26875", "name": "Automation Engineering & PLC" }
+          ]
+        }
+      ]
+    }
+  ]
+}
