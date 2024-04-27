@@ -17,6 +17,8 @@ import Layout from "./layout";
 import TeacherEdit from "../components/dashboard-comp/TeacherEdit";
 import NoticeEdit from "../components/dashboard-comp/NoticEdit";
 import EventEdit from "../components/dashboard-comp/eventEdit";
+import SignUp from "../components/users/signUp";
+import SignIn from "../components/users/singIn";
 
 export const router = createBrowserRouter([
   {
@@ -52,6 +54,14 @@ export const router = createBrowserRouter([
       //   element: <ContactPage />,
       // },
     ],
+  },
+  {
+    path: "/signin",
+    element: <SignIn />,
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
   },
 
   {
